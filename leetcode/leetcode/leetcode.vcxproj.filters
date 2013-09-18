@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\General">
+      <UniqueIdentifier>{99b90a73-4d8a-48a2-b50f-37349e32eddc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DP">
+      <UniqueIdentifier>{736e8390-e8db-4e53-9bcd-b77a7eae048b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DFS">
+      <UniqueIdentifier>{bb746074-8b41-44fa-9175-b4884082f3ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TreeRecursive">
+      <UniqueIdentifier>{63b59ffb-ca6b-40b9-b9c6-5795353888bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Hash">
+      <UniqueIdentifier>{6a016db1-f605-4321-946c-0d1e7a5ebb14}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="Notice_At_Interview.txt">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="leetcode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stack_usage.cpp">
+      <Filter>Source Files\General</Filter>
+    </ClCompile>
+    <ClCompile Include="Palindrome_Partitioning_II.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="vector_usage.cpp">
+      <Filter>Source Files\General</Filter>
+    </ClCompile>
+    <ClCompile Include="Palindrome_Partitioning.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="string_usage.cpp">
+      <Filter>Source Files\General</Filter>
+    </ClCompile>
+    <ClCompile Include="Surrounded_Regions.cpp">
+      <Filter>Source Files\DFS</Filter>
+    </ClCompile>
+    <ClCompile Include="Sum_Root_to_Leaf_Numbers.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Longest_Consecutive_Sequence.cpp">
+      <Filter>Source Files\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="Word_Ladder_II.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="unordered_map_set_usage.cpp">
+      <Filter>Source Files\General</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

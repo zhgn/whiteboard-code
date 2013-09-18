@@ -1,0 +1,2 @@
+1, Pass by reference when using vector and other STL containers if needed!
+2, For BFS/DFS, validation before adding node! 
