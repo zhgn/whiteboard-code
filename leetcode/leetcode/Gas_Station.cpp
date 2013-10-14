@@ -26,8 +26,7 @@ public:
 		return ( x == n-1) ? 0 : x+1;
 	}
 
-    int canCompleteCircuit(vector<int> &gas, vector<int> &cost) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
+    int canCompleteCircuit(vector<int> &gas, vector<int> &cost) {        
         int start = 0;
 		int station_num = gas.size();
 		int gas_diff = 0;
