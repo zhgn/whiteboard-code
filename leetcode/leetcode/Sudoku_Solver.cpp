@@ -1,29 +1,16 @@
-// leetcode.cpp : Defines the entry point for the console application.
-//
+/*
+Write a program to solve a Sudoku puzzle by filling the empty cells.
+
+Empty cells are indicated by the character '.'.
+
+You may assume that there will be only one unique solution. 
+*/
 
 #include "stdafx.h"
-#include <string>
 #include <vector>
-#include <queue>
-#include <stack>
-#include <unordered_set>
-#include <unordered_map>
-#include <iostream>
+#include <algorithm>
 
 using namespace std;
-
-struct TreeNode {
-	int val;
-	TreeNode *left;
-	TreeNode *right;
-	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
 
 class Solution {
 private:
@@ -40,13 +27,6 @@ private:
 					}
 					possible_count[i][j] = 9;
 				}				
-				else {
-					for (int k=1; k<=9; k++) {
-						possible[i][j][k] = (board[i][j] - '0' == k) ? 1 : 0;
-					}
-					possible_count[i][j] = 1;
-				}
-
 			}
 		}
 		for (int i=0; i<9; i++) {
@@ -72,20 +52,20 @@ private:
 
 	bool mark_others(vector<vector<char> > &board, int y, int x, int val, bool undo) {		
 		bool is_valid = true;
-		for (int i=0; i<9; i++) {
-			if (!mark(y, i, val, undo) && board[y][i] == '.') {
-				is_valid = false;			
-			}
-			if (!mark(i, x, val, undo) && board[i][x] == '.') {
-				is_valid = false;			
+		for (int i=0; i<9; i++) {		
+			if (!mark(y, i, val, undo) && (board[y][i] == '.')) {
+				is_valid = false;				
+			}			
+			if (!mark(i, x, val, undo) && (board[i][x] == '.')) {
+				is_valid = false;				
 			}
 		}
 		int start_y = y/3*3;
 		int start_x = x/3*3;
 		for (int i=start_y; i<start_y+3; i++) {
 			for (int j=start_x; j<start_x+3; j++) {				
-				if (!mark(i, j, val, undo) && board[i][j] == '.') {
-					is_valid = false;				
+				if (!mark(i, j, val, undo) && (board[i][j] == '.')) {
+					is_valid = false;
 				}
 			}
 		}
@@ -102,7 +82,7 @@ private:
 					x=j;
 				}
 			}
-		}		
+		}
 		return (min_possible_count < 10);
 	}
 
@@ -142,68 +122,3 @@ public:
 		solve_sudoku_helper(board, y, x);
     }
 };
-
-
-int _tmain(int argc, _TCHAR* argv[])
-{
-	Solution s;	
-	vector<vector<char> > input;
-	vector<char> x;
-	string str = "..9748...";
-	for (int i=0; i<9; i++) {
-		x.push_back(str[i]);
-	}
-	input.push_back(x);
-	str = "7........";
-	x.clear();
-	for (int i=0; i<9; i++) {
-		x.push_back(str[i]);
-	}
-	input.push_back(x);
-	str = ".2.1.9...";
-	x.clear();
-	for (int i=0; i<9; i++) {
-		x.push_back(str[i]);
-	}
-	input.push_back(x);
-	str = "..7...24.";
-	x.clear();
-	for (int i=0; i<9; i++) {
-		x.push_back(str[i]);
-	}
-	input.push_back(x);
-	str = ".64.1.59.";
-	x.clear();
-	for (int i=0; i<9; i++) {
-		x.push_back(str[i]);
-	}
-	input.push_back(x);
-	str = ".98...3..";
-	x.clear();
-	for (int i=0; i<9; i++) {
-		x.push_back(str[i]);
-	}
-	input.push_back(x);
-	str = "...8.3.2.";
-	x.clear();
-	for (int i=0; i<9; i++) {
-		x.push_back(str[i]);
-	}
-	input.push_back(x);
-	str = "........6";
-	x.clear();
-	for (int i=0; i<9; i++) {
-		x.push_back(str[i]);
-	}
-	input.push_back(x);
-	str = "...2759..";
-	x.clear();
-	for (int i=0; i<9; i++) {
-		x.push_back(str[i]);
-	}
-	input.push_back(x);
-	
-	s.solveSudoku(input);
-	return 0;
-}
-

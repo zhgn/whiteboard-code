@@ -28,6 +28,33 @@
     <Filter Include="Source Files\Hash">
       <UniqueIdentifier>{6a016db1-f605-4321-946c-0d1e7a5ebb14}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Graph">
+      <UniqueIdentifier>{948bed9f-f636-4468-b364-51dc52eb1dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BFS">
+      <UniqueIdentifier>{975062ba-ed44-49ca-a9bc-aa632b93ff2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\String">
+      <UniqueIdentifier>{08864c63-8254-48a2-9a88-ee0d27fe4b56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Greedy">
+      <UniqueIdentifier>{6257e91d-f8d6-4128-b368-219fd150adcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BruteForce">
+      <UniqueIdentifier>{c590caf4-90e6-4cd4-bb77-f678c986b6a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math">
+      <UniqueIdentifier>{83a9430a-304b-4f81-b0f8-de7fb7533613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Other">
+      <UniqueIdentifier>{ad013e24-ef7a-4842-818d-2ed8e233d3a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DivideAndConquer">
+      <UniqueIdentifier>{d224f3ea-1a5d-4b7b-b497-28559229ed4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Stack">
+      <UniqueIdentifier>{a59b15a8-fa4b-4d58-a6d4-f79d79073072}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -74,11 +101,332 @@
     <ClCompile Include="Longest_Consecutive_Sequence.cpp">
       <Filter>Source Files\Hash</Filter>
     </ClCompile>
-    <ClCompile Include="Word_Ladder_II.cpp">
-      <Filter>Source Files\DP</Filter>
-    </ClCompile>
     <ClCompile Include="unordered_map_set_usage.cpp">
       <Filter>Source Files\General</Filter>
+    </ClCompile>
+    <ClCompile Include="Clone_Graph.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Word_Ladder_II.cpp">
+      <Filter>Source Files\BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="Word_Ladder.cpp">
+      <Filter>Source Files\BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="Valid_Palindrome.cpp">
+      <Filter>Source Files\String</Filter>
+    </ClCompile>
+    <ClCompile Include="Binary_Tree_Maximum_Path_Sum.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Gas_Station.cpp">
+      <Filter>Source Files\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="Candy.cpp">
+      <Filter>Source Files\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="Best_Time_To_Buy_And_Sell_Stock.cpp">
+      <Filter>Source Files\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="Best_Time_To_Buy_and_Sell_Stock_II.cpp">
+      <Filter>Source Files\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="Best_Time_To_Buy_and_Sell_Stock_III.cpp">
+      <Filter>Source Files\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Pascal_Triangle.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Pascal_Triangle_II.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Populating_Next_Right_Pointers_In_Each_Node.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Populating_Next_Right_Pointers_In_Each_Node_II.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Distinct_Subsequences.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Flatten_Binary_Tree_To_Linked_List.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Path_Sum.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Path_Sum_II.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Minimum_Depth_Of_Binary_Tree.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Balanced_Binary_Tree.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Convert_Sorted_List_To_Binary_Search_Tree.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Convert_Sorted_Array_to_Binary_Search_Tree.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Single_Number.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Single_Number_II.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Binary_Tree_Level_Order_Traversal.cpp">
+      <Filter>Source Files\BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="Binary_Tree_Level_Order_Traversal_II.cpp">
+      <Filter>Source Files\BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="Construct_Binary_Tree_from_Inorder_And_Postorder_Traversal.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Construct_Binary_Tree_From_Preorder_And_Inorder_Traversal.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Maximum_Depth_Of_Binary_Tree.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Binary_Tree_Zigzag_Level_Order_Traversal.cpp">
+      <Filter>Source Files\BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="Same_Tree.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Symmetric_Tree.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Copy_List_With_Random_Pointer.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Word_Break.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Word_Break_II.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Recover_Binary_Search_Tree.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Validate_Binary_Search_Tree.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Interleaving_String.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Unique_Binary_Search_Trees_II.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Unique_Binary_Search_Trees.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Binary_Tree_Inorder_Traversal.cpp">
+      <Filter>Source Files\TreeRecursive</Filter>
+    </ClCompile>
+    <ClCompile Include="Restore_IP_Addresses.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Reverse_Linked_List_II.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="sstream_usage.cpp">
+      <Filter>Source Files\General</Filter>
+    </ClCompile>
+    <ClCompile Include="Subsets_II.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Decode_Ways.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Gray_Code.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Merge_Sorted_Array.cpp">
+      <Filter>Source Files\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Scramble_String.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Partition_List.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Remove_Duplicates_From_Sorted_List.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Remove_Duplicates_From_Sorted_List_II.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Search_In_Rotated_Sorted_Array.cpp">
+      <Filter>Source Files\DivideAndConquer</Filter>
+    </ClCompile>
+    <ClCompile Include="Search_In_Rotated_Sorted_Array_II.cpp">
+      <Filter>Source Files\DivideAndConquer</Filter>
+    </ClCompile>
+    <ClCompile Include="Remove_Duplicates_From_Sorted_Array_II.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Word_Search.cpp">
+      <Filter>Source Files\DFS</Filter>
+    </ClCompile>
+    <ClCompile Include="Subsets.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Combinations.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Minimum_Window_Substring.cpp">
+      <Filter>Source Files\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort_Colors.cpp">
+      <Filter>Source Files\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Search_A_2D_Matrix.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Set_Matrix_Zeroes.cpp">
+      <Filter>Source Files\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Edit_Distance.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Simplify_Path.cpp">
+      <Filter>Source Files\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Climbing_Stairs.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Sqrt_x.cpp">
+      <Filter>Source Files\DivideAndConquer</Filter>
+    </ClCompile>
+    <ClCompile Include="Text_Justification.cpp">
+      <Filter>Source Files\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="Plus_One.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Valid_Number.cpp">
+      <Filter>Source Files\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Add_Binary.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Merge_Two_Sorted_Lists.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Minimum_Path_Sum.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Unique_Paths.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Unique_Paths_II.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Rotate_List.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Permutation_Sequence.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Spiral_Matrix.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Spiral_Matrix_II.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Length_Of_Last_Word.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Insert_Interval.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Merge_Intervals.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Jump_Game.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Maximum_Subarray.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="N_Queens.cpp">
+      <Filter>Source Files\DFS</Filter>
+    </ClCompile>
+    <ClCompile Include="N_Queens_II.cpp">
+      <Filter>Source Files\DFS</Filter>
+    </ClCompile>
+    <ClCompile Include="Anagrams.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Rotate_Image.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Permutation_II.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Permutation.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Jump_Game_II.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Wildcard_Matching.cpp">
+      <Filter>Source Files\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="Mulitply_Strings.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Largest_Rectangle_In_Histogram.cpp">
+      <Filter>Source Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="Maximal_Rectangle.cpp">
+      <Filter>Source Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="Linked_List_Cycle.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Trapping_Rain_Water.cpp">
+      <Filter>Source Files\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Combination_Sum.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Combination_Sum_II.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Count_And_Say.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Sudoku_Solver.cpp">
+      <Filter>Source Files\DFS</Filter>
+    </ClCompile>
+    <ClCompile Include="Linked_List_Cycle_II.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Valid_Sudoku.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Search_Insert_Position.cpp">
+      <Filter>Source Files\DivideAndConquer</Filter>
+    </ClCompile>
+    <ClCompile Include="Pow_x_n.cpp">
+      <Filter>Source Files\DivideAndConquer</Filter>
+    </ClCompile>
+    <ClCompile Include="First_Missing_Positive.cpp">
+      <Filter>Source Files\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="Search_For_A_Range.cpp">
+      <Filter>Source Files\DivideAndConquer</Filter>
+    </ClCompile>
+    <ClCompile Include="Longest_Valid_Parentheses.cpp">
+      <Filter>Source Files\Stack</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -5,3 +5,12 @@
 	Flatten Binary Tree to Linked List
 	Best Time to Buy and Sell Stock III
 	Populating Next Right Pointers in Each Node I/II
+	Text Justification
+	Valid Number
+	Length of Last Word
+	Insert Intervals
+	Word Ladder I/II
+	First Missing Positive
+	Trapping Rain Water
+	Longest Vaild Parentheses
+

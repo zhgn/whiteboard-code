@@ -12,6 +12,8 @@ int string_usage()
 
 	std::string str3 = str.substr (pos);     // get from "live" to the end
 
+	str3.append(4, ' '); // append 4 spaces
+
 	return 0;
 }  
 

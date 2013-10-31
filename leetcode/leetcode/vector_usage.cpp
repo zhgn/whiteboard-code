@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include <vector>
+#include <algorithm>
 
 int vector_usage()
 {
@@ -14,6 +15,10 @@ int vector_usage()
 	// the iterator constructor can also be used to construct from arrays:
 	int myints[] = {16,2,77,29};
 	std::vector<int> fifth (myints, myints + sizeof(myints) / sizeof(int) );
+
+	// erase dup
+	std::sort(fifth.begin(), fifth.end());
+	fifth.erase(std::unique(fifth.begin(), fifth.end()), fifth.end());
 
 	return 0;
 }  
