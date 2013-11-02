@@ -1,7 +1,8 @@
 1, Pass by reference when using vector and other STL containers if needed! And notice that passing by value might be a waste of time.
 2, For BFS/DFS, validation before adding node! 
 3, When designing, ask yourself: does something should be hidden? It's a begin of a good design.
-4, Problems need to review:
+4, Notice that node->next may be changed in a loop. Do not use it as an end condition.
+5, Problems need to review:
 	Flatten Binary Tree to Linked List
 	Best Time to Buy and Sell Stock III
 	Populating Next Right Pointers in Each Node I/II
@@ -13,4 +14,7 @@
 	First Missing Positive
 	Trapping Rain Water
 	Longest Vaild Parentheses
+    Reverse Nodes In K-Group
+    Merge K Sorted Lists
+
 

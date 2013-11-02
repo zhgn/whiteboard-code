@@ -40,7 +40,7 @@ public:
 				s = ++match_with_star;				
 			} else {
 				return false;
-			}
+	        }
 		}
         while (*p == '*') {
 			p++;

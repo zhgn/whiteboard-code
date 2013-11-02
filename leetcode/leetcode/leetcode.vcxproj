@@ -80,6 +80,9 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="3_Sum.cpp" />
+    <ClCompile Include="3_Sum_Closest.cpp" />
+    <ClCompile Include="4_Sum.cpp" />
     <ClCompile Include="Add_Binary.cpp" />
     <ClCompile Include="Anagrams.cpp" />
     <ClCompile Include="Balanced_Binary_Tree.cpp" />
@@ -105,11 +108,14 @@
     <ClCompile Include="Count_And_Say.cpp" />
     <ClCompile Include="Decode_Ways.cpp" />
     <ClCompile Include="Distinct_Subsequences.cpp" />
+    <ClCompile Include="Divide_Two_Integers.cpp" />
     <ClCompile Include="Edit_Distance.cpp" />
     <ClCompile Include="First_Missing_Positive.cpp" />
     <ClCompile Include="Flatten_Binary_Tree_To_Linked_List.cpp" />
     <ClCompile Include="Gas_Station.cpp" />
+    <ClCompile Include="Generate_Parentheses.cpp" />
     <ClCompile Include="Gray_Code.cpp" />
+    <ClCompile Include="Implement_Strstr.cpp" />
     <ClCompile Include="Insert_Interval.cpp" />
     <ClCompile Include="Interleaving_String.cpp" />
     <ClCompile Include="Jump_Game.cpp" />
@@ -117,6 +123,7 @@
     <ClCompile Include="Largest_Rectangle_In_Histogram.cpp" />
     <ClCompile Include="leetcode.cpp" />
     <ClCompile Include="Length_Of_Last_Word.cpp" />
+    <ClCompile Include="Letter_Combinations_Of_A_Phone_Number.cpp" />
     <ClCompile Include="Linked_List_Cycle.cpp" />
     <ClCompile Include="Linked_List_Cycle_II.cpp" />
     <ClCompile Include="Longest_Consecutive_Sequence.cpp" />
@@ -125,12 +132,14 @@
     <ClCompile Include="Maximum_Depth_Of_Binary_Tree.cpp" />
     <ClCompile Include="Maximum_Subarray.cpp" />
     <ClCompile Include="Merge_Intervals.cpp" />
+    <ClCompile Include="Merge_K_Sorted_Lists.cpp" />
     <ClCompile Include="Merge_Sorted_Array.cpp" />
     <ClCompile Include="Merge_Two_Sorted_Lists.cpp" />
     <ClCompile Include="Minimum_Depth_Of_Binary_Tree.cpp" />
     <ClCompile Include="Minimum_Path_Sum.cpp" />
     <ClCompile Include="Minimum_Window_Substring.cpp" />
     <ClCompile Include="Mulitply_Strings.cpp" />
+    <ClCompile Include="Next_Permutation.cpp" />
     <ClCompile Include="N_Queens.cpp" />
     <ClCompile Include="N_Queens_II.cpp" />
     <ClCompile Include="Palindrome_Partitioning_II.cpp" />
@@ -148,11 +157,15 @@
     <ClCompile Include="Populating_Next_Right_Pointers_In_Each_Node_II.cpp" />
     <ClCompile Include="Pow_x_n.cpp" />
     <ClCompile Include="Recover_Binary_Search_Tree.cpp" />
+    <ClCompile Include="Remove_Duplicates_From_Sorted_Array.cpp" />
     <ClCompile Include="Remove_Duplicates_From_Sorted_Array_II.cpp" />
     <ClCompile Include="Remove_Duplicates_From_Sorted_List.cpp" />
     <ClCompile Include="Remove_Duplicates_From_Sorted_List_II.cpp" />
+    <ClCompile Include="Remove_Element.cpp" />
+    <ClCompile Include="Remove_Nth_Node_From_End_Of_List.cpp" />
     <ClCompile Include="Restore_IP_Addresses.cpp" />
     <ClCompile Include="Reverse_Linked_List_II.cpp" />
+    <ClCompile Include="Reverse_Nodes_In_K-Group.cpp" />
     <ClCompile Include="Rotate_Image.cpp" />
     <ClCompile Include="Rotate_List.cpp" />
     <ClCompile Include="Same_Tree.cpp" />
@@ -179,9 +192,11 @@
     <ClCompile Include="string_usage.cpp" />
     <ClCompile Include="Subsets.cpp" />
     <ClCompile Include="Subsets_II.cpp" />
+    <ClCompile Include="Substring_With_Concatenation_Of_All_Words.cpp" />
     <ClCompile Include="Sudoku_Solver.cpp" />
     <ClCompile Include="Sum_Root_to_Leaf_Numbers.cpp" />
     <ClCompile Include="Surrounded_Regions.cpp" />
+    <ClCompile Include="Swap_Nodes_In_Pairs.cpp" />
     <ClCompile Include="Symmetric_Tree.cpp" />
     <ClCompile Include="Text_Justification.cpp" />
     <ClCompile Include="Trapping_Rain_Water.cpp" />
@@ -194,6 +209,7 @@
     <ClCompile Include="Validate_Binary_Search_Tree.cpp" />
     <ClCompile Include="Valid_Number.cpp" />
     <ClCompile Include="Valid_Palindrome.cpp" />
+    <ClCompile Include="Valid_Parentheses.cpp" />
     <ClCompile Include="Valid_Sudoku.cpp" />
     <ClCompile Include="vector_usage.cpp" />
     <ClCompile Include="Wildcard_Matching.cpp" />

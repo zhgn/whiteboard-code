@@ -55,6 +55,9 @@
     <Filter Include="Source Files\Stack">
       <UniqueIdentifier>{a59b15a8-fa4b-4d58-a6d4-f79d79073072}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Heap">
+      <UniqueIdentifier>{84a78523-2f5a-4a82-b1ab-56ce2ff0da94}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -427,6 +430,54 @@
     </ClCompile>
     <ClCompile Include="Longest_Valid_Parentheses.cpp">
       <Filter>Source Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="Next_Permutation.cpp">
+      <Filter>Source Files\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Substring_With_Concatenation_Of_All_Words.cpp">
+      <Filter>Source Files\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="Divide_Two_Integers.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Implement_Strstr.cpp">
+      <Filter>Source Files\String</Filter>
+    </ClCompile>
+    <ClCompile Include="Remove_Element.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Remove_Duplicates_From_Sorted_Array.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Reverse_Nodes_In_K-Group.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Swap_Nodes_In_Pairs.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Merge_K_Sorted_Lists.cpp">
+      <Filter>Source Files\Heap</Filter>
+    </ClCompile>
+    <ClCompile Include="Generate_Parentheses.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Valid_Parentheses.cpp">
+      <Filter>Source Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="Remove_Nth_Node_From_End_Of_List.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Letter_Combinations_Of_A_Phone_Number.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="4_Sum.cpp">
+      <Filter>Source Files\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="3_Sum_Closest.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="3_Sum.cpp">
+      <Filter>Source Files\BruteForce</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
