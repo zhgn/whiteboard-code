@@ -26,10 +26,10 @@ using namespace std;
  * Definition for binary tree
  */
 struct TreeNode {
-	int val;
-	TreeNode *left;
-	TreeNode *right;
-	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
 class Solution {
@@ -43,16 +43,16 @@ public:
             return result;
         }
         st.push(root);        
-		while (!st.empty())
+        while (!st.empty())
         {
-			TreeNode *cur = st.top();
-			st.pop();
+            TreeNode *cur = st.top();
+            st.pop();
             if (cur->left != NULL)
-            {				
-				TreeNode *left = cur->left;
-				cur->left = NULL;
-				st.push(cur);
-				st.push(left);                
+            {                
+                TreeNode *left = cur->left;
+                cur->left = NULL;
+                st.push(cur);
+                st.push(left);                
             }
             else
             {                                                
@@ -63,6 +63,6 @@ public:
                 }                
             }
         }
-        return result;	      
+        return result;          
     }
 };

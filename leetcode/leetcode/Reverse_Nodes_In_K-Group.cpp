@@ -25,15 +25,15 @@ struct ListNode {
 
 class Solution {
 private:
-	bool reverse_k_nodes(ListNode *&pre_head, int k) {
-		ListNode *tail = pre_head;
-		for (int i=0; i<k; i++) {
-			if (tail != NULL) {
-				tail = tail->next;
-			} else {
-				return false;
-			}			
-		}
+    bool reverse_k_nodes(ListNode *&pre_head, int k) {
+        ListNode *tail = pre_head;
+        for (int i=0; i<k; i++) {
+            if (tail != NULL) {
+                tail = tail->next;
+            } else {
+                return false;
+            }            
+        }
         if (tail == NULL) {
             return false;
         }
@@ -51,16 +51,16 @@ private:
         pre_head->next = tail;
         pre_head = next_pre_head;
         return true;
-	}
+    }
 
 public:
     ListNode *reverseKGroup(ListNode *head, int k) {
         ListNode *dummy_head = new ListNode(0);
-		dummy_head->next = head;		
-		ListNode *pre_head = dummy_head;        
-		while (reverse_k_nodes(pre_head, k)) {
-			;
-		}
-		return dummy_head->next;
+        dummy_head->next = head;        
+        ListNode *pre_head = dummy_head;        
+        while (reverse_k_nodes(pre_head, k)) {
+            ;
+        }
+        return dummy_head->next;
     }
 };

@@ -19,25 +19,25 @@ struct ListNode {
 class Solution {
 public:
     ListNode *partition(ListNode *head, int x) {
-		ListNode *less_head = new ListNode(0);
-		ListNode *greater_equal_head = new ListNode(0);
-		ListNode *less_cur = less_head;
-		ListNode *greater_equal_cur = greater_equal_head;
-		ListNode *cur = head;
-		while (cur != NULL) {
-			if (cur->val < x) {
-				less_cur->next = cur;
-				less_cur = cur;
-				cur = cur->next;
-				less_cur->next = NULL;
-			} else {
-				greater_equal_cur->next = cur;
-				greater_equal_cur = cur;
-				cur = cur->next;
-				greater_equal_cur->next = NULL;
-			}
-		}
-		less_cur->next = greater_equal_head->next;
-		return less_head->next;
+        ListNode *less_head = new ListNode(0);
+        ListNode *greater_equal_head = new ListNode(0);
+        ListNode *less_cur = less_head;
+        ListNode *greater_equal_cur = greater_equal_head;
+        ListNode *cur = head;
+        while (cur != NULL) {
+            if (cur->val < x) {
+                less_cur->next = cur;
+                less_cur = cur;
+                cur = cur->next;
+                less_cur->next = NULL;
+            } else {
+                greater_equal_cur->next = cur;
+                greater_equal_cur = cur;
+                cur = cur->next;
+                greater_equal_cur->next = NULL;
+            }
+        }
+        less_cur->next = greater_equal_head->next;
+        return less_head->next;
     }
 };

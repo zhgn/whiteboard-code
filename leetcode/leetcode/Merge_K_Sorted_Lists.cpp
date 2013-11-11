@@ -18,7 +18,7 @@ struct ListNode {
 class Solution {
 public:
     ListNode *mergeKLists(vector<ListNode *> &lists) {
-		priority_queue<pair<int,int>, vector<pair<int,int> >, Solution::MyCmp> p;
+        priority_queue<pair<int,int>, vector<pair<int,int> >, Solution::MyCmp> p;
         int n = lists.size();
         ListNode *head = NULL;
         ListNode *cur = NULL;        
@@ -54,10 +54,10 @@ public:
     
     class MyCmp
     {
-	public:
-		bool operator() (const pair<int, int> &lhs, const pair<int, int> &rhs) const
-		{		
-			return lhs.first > rhs.first;
-		}
+    public:
+        bool operator() (const pair<int, int> &lhs, const pair<int, int> &rhs) const
+        {        
+            return lhs.first > rhs.first;
+        }
     };
 };

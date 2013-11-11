@@ -39,32 +39,32 @@ struct TreeLinkNode {
 
 class Solution {
 private:
-	TreeLinkNode *findNextNode(TreeLinkNode *parent) {
-		TreeLinkNode *cur = parent->next;
-		while (cur != NULL) {				
-			if (cur->left != NULL) {				
-				return cur->left;
-			} 
-			if (cur->right != NULL) {
-				return cur->right;	
-			}
-			cur = cur->next;
-		}
-		return NULL;
-	}
+    TreeLinkNode *findNextNode(TreeLinkNode *parent) {
+        TreeLinkNode *cur = parent->next;
+        while (cur != NULL) {                
+            if (cur->left != NULL) {                
+                return cur->left;
+            } 
+            if (cur->right != NULL) {
+                return cur->right;    
+            }
+            cur = cur->next;
+        }
+        return NULL;
+    }
 
 public:
     void connect(TreeLinkNode *root) {
-		if (root == NULL) {
-			return;
-		}
-		if (root->left != NULL) {
-			root->left->next = (root->right == NULL) ? findNextNode(root) : root->right;
-		}
-		if (root->right != NULL) {
-			root->right->next = findNextNode(root);
-		}
-		connect(root->right);   
-		connect(root->left);		       
+        if (root == NULL) {
+            return;
+        }
+        if (root->left != NULL) {
+            root->left->next = (root->right == NULL) ? findNextNode(root) : root->right;
+        }
+        if (root->right != NULL) {
+            root->right->next = findNextNode(root);
+        }
+        connect(root->right);   
+        connect(root->left);               
     }
 };

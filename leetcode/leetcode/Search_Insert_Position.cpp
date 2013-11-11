@@ -15,22 +15,22 @@ You may assume no duplicates in the array.
 class Solution {
 public:
     int searchInsert(int A[], int n, int target) {
-		if (n == 0 || A[0] >= target) {
-			return 0;
-		}
-		int low = 0;
-		int high = n;		
-		while (low < high - 1) {
-			int mid = (low + high) / 2;
-			if (A[mid] == target) {
-				return mid;
-			}
-			if (A[mid] < target) {
-				low = mid;
-			} else {
-				high = mid;
-			}
-		}
-		return high;
+        if (n == 0 || A[0] >= target) {
+            return 0;
+        }
+        int low = 0;
+        int high = n;        
+        while (low < high - 1) {
+            int mid = (low + high) / 2;
+            if (A[mid] == target) {
+                return mid;
+            }
+            if (A[mid] < target) {
+                low = mid;
+            } else {
+                high = mid;
+            }
+        }
+        return high;
     }
 };

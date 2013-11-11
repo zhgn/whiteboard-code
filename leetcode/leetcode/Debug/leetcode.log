@@ -1,0 +1,187 @@
+﻿Build started 11/8/2013 6:21:52 PM.
+     1>Project "C:\Users\yuazh\Documents\GitHub\whiteboard-code\leetcode\leetcode\leetcode.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\leetcode.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\leetcode.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Add_Two_Numbers.cpp Binary_Tree_Postorder_Travelsal.cpp Longest_Palindromic_Substring.cpp Longest_Substring_Without_Repeating_Characters.cpp Median_Of_Two_Sorted_Arrays.cpp Reverse_Integer.cpp "String_To_Integer_(Atoi).cpp" ZigZag_Conversion.cpp
+         ZigZag_Conversion.cpp
+         String_To_Integer_(Atoi).cpp
+     1>c:\users\yuazh\documents\github\whiteboard-code\leetcode\leetcode\string_to_integer_(atoi).cpp(51): warning C4244: 'return' : conversion from '__int64' to 'int', possible loss of data
+         Reverse_Integer.cpp
+     1>c:\users\yuazh\documents\github\whiteboard-code\leetcode\leetcode\reverse_integer.cpp(31): warning C4244: 'return' : conversion from '__int64' to 'int', possible loss of data
+         Median_Of_Two_Sorted_Arrays.cpp
+         Longest_Substring_Without_Repeating_Characters.cpp
+         Longest_Palindromic_Substring.cpp
+         Binary_Tree_Postorder_Travelsal.cpp
+         Add_Two_Numbers.cpp
+         Generating Code...
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\yuazh\Documents\GitHub\whiteboard-code\leetcode\Debug\leetcode.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\leetcode.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\yuazh\Documents\GitHub\whiteboard-code\leetcode\Debug\leetcode.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\yuazh\Documents\GitHub\whiteboard-code\leetcode\Debug\leetcode.lib" /MACHINE:X86 Debug\leetcode.exe.embed.manifest.res
+         Debug\3_Sum.obj
+         Debug\3_Sum_Closest.obj
+         Debug\4_Sum.obj
+         Debug\Add_Binary.obj
+         Debug\Add_Two_Numbers.obj
+         Debug\Anagrams.obj
+         Debug\Balanced_Binary_Tree.obj
+         Debug\Best_Time_To_Buy_And_Sell_Stock.obj
+         Debug\Best_Time_To_Buy_and_Sell_Stock_II.obj
+         Debug\Best_Time_To_Buy_and_Sell_Stock_III.obj
+         Debug\Binary_Tree_Inorder_Traversal.obj
+         Debug\Binary_Tree_Level_Order_Traversal.obj
+         Debug\Binary_Tree_Level_Order_Traversal_II.obj
+         Debug\Binary_Tree_Maximum_Path_Sum.obj
+         Debug\Binary_Tree_Postorder_Travelsal.obj
+         Debug\Binary_Tree_Preorder_Traversal.obj
+         Debug\Binary_Tree_Zigzag_Level_Order_Traversal.obj
+         Debug\Candy.obj
+         Debug\Climbing_Stairs.obj
+         Debug\Clone_Graph.obj
+         Debug\Combinations.obj
+         Debug\Combination_Sum.obj
+         Debug\Combination_Sum_II.obj
+         Debug\Construct_Binary_Tree_from_Inorder_And_Postorder_Traversal.obj
+         Debug\Construct_Binary_Tree_From_Preorder_And_Inorder_Traversal.obj
+         Debug\Container_With_Most_Water.obj
+         Debug\Convert_Sorted_Array_to_Binary_Search_Tree.obj
+         Debug\Convert_Sorted_List_To_Binary_Search_Tree.obj
+         Debug\Copy_List_With_Random_Pointer.obj
+         Debug\Count_And_Say.obj
+         Debug\Decode_Ways.obj
+         Debug\Distinct_Subsequences.obj
+         Debug\Divide_Two_Integers.obj
+         Debug\Edit_Distance.obj
+         Debug\First_Missing_Positive.obj
+         Debug\Flatten_Binary_Tree_To_Linked_List.obj
+         Debug\Gas_Station.obj
+         Debug\Generate_Parentheses.obj
+         Debug\Gray_Code.obj
+         Debug\Implement_Strstr.obj
+         Debug\Insert_Interval.obj
+         Debug\Integer_To_Roman.obj
+         Debug\Interleaving_String.obj
+         Debug\Jump_Game.obj
+         Debug\Jump_Game_II.obj
+         Debug\Largest_Rectangle_In_Histogram.obj
+         Debug\leetcode.obj
+         Debug\Length_Of_Last_Word.obj
+         Debug\Letter_Combinations_Of_A_Phone_Number.obj
+         Debug\Linked_List_Cycle.obj
+         Debug\Linked_List_Cycle_II.obj
+         Debug\Longest_Common_Prefix.obj
+         Debug\Longest_Consecutive_Sequence.obj
+         Debug\Longest_Palindromic_Substring.obj
+         Debug\Longest_Substring_Without_Repeating_Characters.obj
+         Debug\Longest_Valid_Parentheses.obj
+         Debug\Maximal_Rectangle.obj
+         Debug\Maximum_Depth_Of_Binary_Tree.obj
+         Debug\Maximum_Subarray.obj
+         Debug\Median_Of_Two_Sorted_Arrays.obj
+         Debug\Merge_Intervals.obj
+         Debug\Merge_K_Sorted_Lists.obj
+         Debug\Merge_Sorted_Array.obj
+         Debug\Merge_Two_Sorted_Lists.obj
+         Debug\Minimum_Depth_Of_Binary_Tree.obj
+         Debug\Minimum_Path_Sum.obj
+         Debug\Minimum_Window_Substring.obj
+         Debug\Mulitply_Strings.obj
+         Debug\Next_Permutation.obj
+         Debug\N_Queens.obj
+         Debug\N_Queens_II.obj
+         Debug\Palindrome_Number.obj
+         Debug\Palindrome_Partitioning_II.obj
+         Debug\Palindrome_Partitioning.obj
+         Debug\Partition_List.obj
+         Debug\Pascal_Triangle.obj
+         Debug\Pascal_Triangle_II.obj
+         Debug\Path_Sum.obj
+         Debug\Path_Sum_II.obj
+         Debug\Permutation.obj
+         Debug\Permutation_II.obj
+         Debug\Permutation_Sequence.obj
+         Debug\Plus_One.obj
+         Debug\Populating_Next_Right_Pointers_In_Each_Node.obj
+         Debug\Populating_Next_Right_Pointers_In_Each_Node_II.obj
+         Debug\Pow_x_n.obj
+         Debug\Recover_Binary_Search_Tree.obj
+         Debug\Regular_Expression_Matching.obj
+         Debug\Remove_Duplicates_From_Sorted_Array.obj
+         Debug\Remove_Duplicates_From_Sorted_Array_II.obj
+         Debug\Remove_Duplicates_From_Sorted_List.obj
+         Debug\Remove_Duplicates_From_Sorted_List_II.obj
+         Debug\Remove_Element.obj
+         Debug\Remove_Nth_Node_From_End_Of_List.obj
+         Debug\Reorder_List.obj
+         Debug\Restore_IP_Addresses.obj
+         Debug\Reverse_Integer.obj
+         Debug\Reverse_Linked_List_II.obj
+         "Debug\Reverse_Nodes_In_K-Group.obj"
+         Debug\Roman_To_Integer.obj
+         Debug\Rotate_Image.obj
+         Debug\Rotate_List.obj
+         Debug\Same_Tree.obj
+         Debug\Scramble_String.obj
+         Debug\Search_A_2D_Matrix.obj
+         Debug\Search_For_A_Range.obj
+         Debug\Search_Insert_Position.obj
+         Debug\Search_In_Rotated_Sorted_Array.obj
+         Debug\Search_In_Rotated_Sorted_Array_II.obj
+         Debug\Set_Matrix_Zeroes.obj
+         Debug\Simplify_Path.obj
+         Debug\Single_Number.obj
+         Debug\Single_Number_II.obj
+         Debug\Sort_Colors.obj
+         Debug\Spiral_Matrix.obj
+         Debug\Spiral_Matrix_II.obj
+         Debug\Sqrt_x.obj
+         Debug\sstream_usage.obj
+         Debug\stack_usage.obj
+         Debug\stdafx.obj
+         "Debug\String_To_Integer_(Atoi).obj"
+         Debug\string_usage.obj
+         Debug\Subsets.obj
+         Debug\Subsets_II.obj
+         Debug\Substring_With_Concatenation_Of_All_Words.obj
+         Debug\Sudoku_Solver.obj
+         Debug\Sum_Root_to_Leaf_Numbers.obj
+         Debug\Surrounded_Regions.obj
+         Debug\Swap_Nodes_In_Pairs.obj
+         Debug\Symmetric_Tree.obj
+         Debug\Text_Justification.obj
+         Debug\Trapping_Rain_Water.obj
+         Debug\Triangle.obj
+         Debug\Unique_Binary_Search_Trees.obj
+         Debug\Unique_Binary_Search_Trees_II.obj
+         Debug\Unique_Paths.obj
+         Debug\Unique_Paths_II.obj
+         Debug\unordered_map_set_usage.obj
+         Debug\Validate_Binary_Search_Tree.obj
+         Debug\Valid_Number.obj
+         Debug\Valid_Palindrome.obj
+         Debug\Valid_Parentheses.obj
+         Debug\Valid_Sudoku.obj
+         Debug\vector_usage.obj
+         Debug\Wildcard_Matching.obj
+         Debug\Word_Break.obj
+         Debug\Word_Break_II.obj
+         Debug\Word_Ladder.obj
+         Debug\Word_Ladder_II.obj
+         Debug\Word_Search.obj
+         Debug\ZigZag_Conversion.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\leetcode.exe.embed.manifest" /manifest Debug\leetcode.exe.intermediate.manifest
+         All outputs are up-to-date.
+       LinkEmbedManifest:
+         All outputs are up-to-date.
+         leetcode.vcxproj -> C:\Users\yuazh\Documents\GitHub\whiteboard-code\leetcode\Debug\leetcode.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\leetcode.unsuccessfulbuild".
+         Touching "Debug\leetcode.lastbuildstate".
+     1>Done Building Project "C:\Users\yuazh\Documents\GitHub\whiteboard-code\leetcode\leetcode\leetcode.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.24

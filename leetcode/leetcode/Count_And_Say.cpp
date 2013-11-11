@@ -21,23 +21,23 @@ using namespace std;
 class Solution {
 public:
     string countAndSay(int n) {
-		string result = "1";
+        string result = "1";
         for (int i=1; i<n; i++)
-		{
-			string tmp;
-			for (int j=0; j<result.length(); j++)
-			{
-				int count = 0;
-				int k;
-				for (k=j+1; k<result.length(), result[k] == result[j]; k++);
-				count = k - j;
-				stringstream out;
-				out << count << result[j];
-				tmp += out.str();
-				j += count-1;
-			}
-			result = tmp;
-		}
-		return result;
+        {
+            string tmp;
+            for (int j=0; j<result.length(); j++)
+            {
+                int count = 0;
+                int k;
+                for (k=j+1; k<result.length(), result[k] == result[j]; k++);
+                count = k - j;
+                stringstream out;
+                out << count << result[j];
+                tmp += out.str();
+                j += count-1;
+            }
+            result = tmp;
+        }
+        return result;
     }
 };

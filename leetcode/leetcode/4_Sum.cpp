@@ -28,35 +28,35 @@ public:
         unordered_multimap<int, pair<int, int> > pair_sums;        
         pair_sums.clear();
         sort(num.begin(), num.end());
-		vector<vector<int> > result;
+        vector<vector<int> > result;
 
         for (int i=0; i<n; i++)
         {
             for (int j=i+1; j<n; j++)
             {
-                int s = num[i] + num[j];			
-				pair_sums.insert( make_pair(s, make_pair(i,j)) );
-				pair<unordered_multimap<int, pair<int, int> >::iterator, unordered_multimap<int, pair<int, int> >::iterator> range = pair_sums.equal_range( target-s );
-				for (unordered_multimap<int, pair<int, int> >::iterator it = range.first; it != range.second; it++ )
-				{									
-					pair<int, int> *other_two = &(it->second);
-					if (other_two->first != i && other_two->second != i && other_two->first != j && other_two->second != j)
-					{
-						vector<int> fourNum;
-						fourNum.clear();
-						fourNum.push_back(num[i]);
-						fourNum.push_back(num[j]);
-						fourNum.push_back(num[other_two->first]);
-						fourNum.push_back(num[other_two->second]);
-						sort(fourNum.begin(), fourNum.end());
-						result.push_back(fourNum);
-					}
-					it = it++;
-				}
+                int s = num[i] + num[j];            
+                pair_sums.insert( make_pair(s, make_pair(i,j)) );
+                pair<unordered_multimap<int, pair<int, int> >::iterator, unordered_multimap<int, pair<int, int> >::iterator> range = pair_sums.equal_range( target-s );
+                for (unordered_multimap<int, pair<int, int> >::iterator it = range.first; it != range.second; it++ )
+                {                                    
+                    pair<int, int> *other_two = &(it->second);
+                    if (other_two->first != i && other_two->second != i && other_two->first != j && other_two->second != j)
+                    {
+                        vector<int> fourNum;
+                        fourNum.clear();
+                        fourNum.push_back(num[i]);
+                        fourNum.push_back(num[j]);
+                        fourNum.push_back(num[other_two->first]);
+                        fourNum.push_back(num[other_two->second]);
+                        sort(fourNum.begin(), fourNum.end());
+                        result.push_back(fourNum);
+                    }
+                    it = it++;
+                }
             }
-        }		
-		sort(result.begin(), result.end());
-		result.erase(unique(result.begin(), result.end()), result.end());
+        }        
+        sort(result.begin(), result.end());
+        result.erase(unique(result.begin(), result.end()), result.end());
         return result;
     }    
 };

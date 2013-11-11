@@ -16,20 +16,20 @@ If you have figured out the O(n) solution, try coding another solution using the
 class Solution {
 public:
     int maxSubArray(int A[], int n) {
-		if (n == 0) {
-			return 0;
-		}
-		int max_sub_array = A[0];
-		int cur_max = 0;
-		for (int i=0; i<n; i++) {
-			cur_max += A[i];
-			if (cur_max > max_sub_array) {
-				max_sub_array = cur_max;
-			}
-			if (cur_max < 0) {
-				cur_max = 0;
-			}
-		}
-		return max_sub_array;
+        if (n == 0) {
+            return 0;
+        }
+        int max_sub_array = A[0];
+        int cur_max = 0;
+        for (int i=0; i<n; i++) {
+            cur_max += A[i];
+            if (cur_max > max_sub_array) {
+                max_sub_array = cur_max;
+            }
+            if (cur_max < 0) {
+                cur_max = 0;
+            }
+        }
+        return max_sub_array;
     }
 };

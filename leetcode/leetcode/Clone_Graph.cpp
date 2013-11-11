@@ -40,61 +40,61 @@ struct UndirectedGraphNode {
 
 class Solution {
 public:
-	struct NodeInfo {
-		UndirectedGraphNode *p_node;
-		bool cloned;
-		NodeInfo(UndirectedGraphNode *m_p_node, bool m_cloned) : p_node(m_p_node), cloned(m_cloned) {};
-	};
+    struct NodeInfo {
+        UndirectedGraphNode *p_node;
+        bool cloned;
+        NodeInfo(UndirectedGraphNode *m_p_node, bool m_cloned) : p_node(m_p_node), cloned(m_cloned) {};
+    };
 
-	unordered_map<int, NodeInfo*> all_nodes;
+    unordered_map<int, NodeInfo*> all_nodes;
 
-	UndirectedGraphNode *insertNewNode(UndirectedGraphNode *node) {   		
-		UndirectedGraphNode *cloned_node = new UndirectedGraphNode(node->label);
-		NodeInfo *cloned_node_info = new NodeInfo(cloned_node, false);
-		all_nodes.insert(make_pair(cloned_node->label, cloned_node_info));
+    UndirectedGraphNode *insertNewNode(UndirectedGraphNode *node) {           
+        UndirectedGraphNode *cloned_node = new UndirectedGraphNode(node->label);
+        NodeInfo *cloned_node_info = new NodeInfo(cloned_node, false);
+        all_nodes.insert(make_pair(cloned_node->label, cloned_node_info));
 
-		return cloned_node;
-	}
+        return cloned_node;
+    }
 
-    UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node) {        		
-		all_nodes.clear();
+    UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node) {                
+        all_nodes.clear();
 
-		UndirectedGraphNode *result_node = NULL;
-		stack<UndirectedGraphNode *> waiting_nodes;
-		if (node != NULL) {
-			waiting_nodes.push(node);
-			insertNewNode(node);
-		}		
+        UndirectedGraphNode *result_node = NULL;
+        stack<UndirectedGraphNode *> waiting_nodes;
+        if (node != NULL) {
+            waiting_nodes.push(node);
+            insertNewNode(node);
+        }        
 
-		while (!waiting_nodes.empty()) {
-			auto dealing_node = waiting_nodes.top();
-			waiting_nodes.pop();
+        while (!waiting_nodes.empty()) {
+            auto dealing_node = waiting_nodes.top();
+            waiting_nodes.pop();
 
-			auto it_all_nodes = all_nodes.find(dealing_node->label);
-			it_all_nodes->second->cloned = true;
-			UndirectedGraphNode *cur_node = it_all_nodes->second->p_node;
-			if (result_node == NULL) {
-				result_node = cur_node;
-			}
+            auto it_all_nodes = all_nodes.find(dealing_node->label);
+            it_all_nodes->second->cloned = true;
+            UndirectedGraphNode *cur_node = it_all_nodes->second->p_node;
+            if (result_node == NULL) {
+                result_node = cur_node;
+            }
 
-			for (auto it_d_n = dealing_node->neighbors.begin(); it_d_n != dealing_node->neighbors.end(); it_d_n++) {
-				auto it_same_label = all_nodes.find((*it_d_n)->label);
-				UndirectedGraphNode *neighbor;
-				if (it_same_label == all_nodes.end()) {
-					neighbor = insertNewNode(*it_d_n);
-					waiting_nodes.push(*it_d_n);
-				} else {
-					neighbor = it_same_label->second->p_node;
-				}
-				cur_node->neighbors.push_back(neighbor);
-			}
-		}
+            for (auto it_d_n = dealing_node->neighbors.begin(); it_d_n != dealing_node->neighbors.end(); it_d_n++) {
+                auto it_same_label = all_nodes.find((*it_d_n)->label);
+                UndirectedGraphNode *neighbor;
+                if (it_same_label == all_nodes.end()) {
+                    neighbor = insertNewNode(*it_d_n);
+                    waiting_nodes.push(*it_d_n);
+                } else {
+                    neighbor = it_same_label->second->p_node;
+                }
+                cur_node->neighbors.push_back(neighbor);
+            }
+        }
 
-		for (auto it_all_nodes = all_nodes.begin(); it_all_nodes != all_nodes.end(); it_all_nodes++) {
-			delete it_all_nodes->second;
-		}
-		all_nodes.clear();
+        for (auto it_all_nodes = all_nodes.begin(); it_all_nodes != all_nodes.end(); it_all_nodes++) {
+            delete it_all_nodes->second;
+        }
+        all_nodes.clear();
 
-		return result_node;
+        return result_node;
     }
 };

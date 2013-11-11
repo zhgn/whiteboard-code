@@ -14,25 +14,25 @@ stringmap merge (stringmap a,stringmap b) {
 
 int unordered_map_usage()
 {
-	stringmap first;                              // empty
-	stringmap second;
-	stringmap third;
-	stringmap fourth (second);                    // copy
-	stringmap fifth (merge(third,fourth));        // move
-	stringmap sixth (fifth.begin(),fifth.end());  // range	
+    stringmap first;                              // empty
+    stringmap second;
+    stringmap third;
+    stringmap fourth (second);                    // copy
+    stringmap fifth (merge(third,fourth));        // move
+    stringmap sixth (fifth.begin(),fifth.end());  // range    
 
-	std::unordered_map<std::string,std::string>::const_iterator got = first.find ("input");
+    std::unordered_map<std::string,std::string>::const_iterator got = first.find ("input");
 
-	if ( got == first.end() )
-		std::cout << "not found";
-	else
-		std::cout << got->first << " is " << got->second;
+    if ( got == first.end() )
+        std::cout << "not found";
+    else
+        std::cout << got->first << " is " << got->second;
 
-	return 0;
+    return 0;
 }  
 
 int unordered_set_usage()
 {
-	
-	return 0;
+    
+    return 0;
 }

@@ -29,7 +29,7 @@ using namespace std;
 
 class Solution {
 private:
-	void solveNQueensHelper(vector<int> &queen, int p, int n, vector<vector<string> > &result)
+    void solveNQueensHelper(vector<int> &queen, int p, int n, vector<vector<string> > &result)
     {
         for (int i=0; i<n; i++)
         {

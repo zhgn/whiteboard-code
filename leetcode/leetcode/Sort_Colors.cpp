@@ -18,25 +18,25 @@ Could you come up with an one-pass algorithm using only constant space?
 
 class Solution {
 private:
-	void swap(int A[], int pos1, int pos2) {
-		int tmp = A[pos1];
-		A[pos1] = A[pos2];
-		A[pos2] = tmp;
-	}
+    void swap(int A[], int pos1, int pos2) {
+        int tmp = A[pos1];
+        A[pos1] = A[pos2];
+        A[pos2] = tmp;
+    }
 
 public:
-    void sortColors(int A[], int n) {		
-		for (int i=0, zeros=0, ones=0; i<n; i++) {
-			if (A[i] == 0) {
-				swap(A, zeros, i);
-				if (A[i] == 1) {
-					swap(A, ones + zeros, i);
-				}
-				zeros++;					
-			} else if (A[i] == 1) {
-				swap(A, ones + zeros, i);
-				ones++;
-			}
-		}
+    void sortColors(int A[], int n) {        
+        for (int i=0, zeros=0, ones=0; i<n; i++) {
+            if (A[i] == 0) {
+                swap(A, zeros, i);
+                if (A[i] == 1) {
+                    swap(A, ones + zeros, i);
+                }
+                zeros++;                    
+            } else if (A[i] == 1) {
+                swap(A, ones + zeros, i);
+                ones++;
+            }
+        }
     }
 };

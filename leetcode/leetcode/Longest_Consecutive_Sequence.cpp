@@ -15,55 +15,55 @@ using namespace std;
 
 class Solution {
 public:
-	struct ConsInfo {
-		int up_to;
-		int down_to;
-	};
+    struct ConsInfo {
+        int up_to;
+        int down_to;
+    };
 
-	unordered_map<int, ConsInfo> hash;
+    unordered_map<int, ConsInfo> hash;
 
-	int InsertNumAndRetCurCons(int val) {
-		ConsInfo ci;
-		unordered_map<int, ConsInfo>::iterator up_it = hash.find(val+1);
-		unordered_map<int, ConsInfo>::iterator down_it = hash.find(val-1);
-		if (up_it == hash.end()) {
-			ci.up_to = val;
-		} else {
-			ci.up_to = up_it->second.up_to;			
-		}
-		if (down_it == hash.end()) {
-			ci.down_to = val;
-		} else {
-			ci.down_to = down_it->second.down_to;
-		}
-		hash.insert(make_pair(val, ci));
+    int InsertNumAndRetCurCons(int val) {
+        ConsInfo ci;
+        unordered_map<int, ConsInfo>::iterator up_it = hash.find(val+1);
+        unordered_map<int, ConsInfo>::iterator down_it = hash.find(val-1);
+        if (up_it == hash.end()) {
+            ci.up_to = val;
+        } else {
+            ci.up_to = up_it->second.up_to;            
+        }
+        if (down_it == hash.end()) {
+            ci.down_to = val;
+        } else {
+            ci.down_to = down_it->second.down_to;
+        }
+        hash.insert(make_pair(val, ci));
 
-		// only need maintain endpoints of interval
-		if (up_it != hash.end()) {			
-			unordered_map<int, ConsInfo>::iterator up_end = hash.find(up_it->second.up_to);
-			up_end->second.down_to = ci.down_to;
-		}
-		if (down_it != hash.end()) {
-			unordered_map<int, ConsInfo>::iterator down_end = hash.find(down_it->second.down_to);
-			down_end->second.up_to = ci.up_to;
-		}
-		return ci.up_to - ci.down_to + 1;
-	}
+        // only need maintain endpoints of interval
+        if (up_it != hash.end()) {            
+            unordered_map<int, ConsInfo>::iterator up_end = hash.find(up_it->second.up_to);
+            up_end->second.down_to = ci.down_to;
+        }
+        if (down_it != hash.end()) {
+            unordered_map<int, ConsInfo>::iterator down_end = hash.find(down_it->second.down_to);
+            down_end->second.up_to = ci.up_to;
+        }
+        return ci.up_to - ci.down_to + 1;
+    }
 
     int longestConsecutive(vector<int> &num) {
-		hash.clear();
+        hash.clear();
         int len = num.size();
-		int max_cons = 0;
+        int max_cons = 0;
 
-		for (int i=0; i<len; i++) {
-			unordered_map<int, ConsInfo>::iterator cur_it = hash.find(num[i]);
-			if (cur_it == hash.end()) {
-				int cons_len = InsertNumAndRetCurCons(num[i]);
-				if (cons_len > max_cons) {
-					max_cons = cons_len;
-				}
-			} 
-		}
-		return max_cons;
+        for (int i=0; i<len; i++) {
+            unordered_map<int, ConsInfo>::iterator cur_it = hash.find(num[i]);
+            if (cur_it == hash.end()) {
+                int cons_len = InsertNumAndRetCurCons(num[i]);
+                if (cons_len > max_cons) {
+                    max_cons = cons_len;
+                }
+            } 
+        }
+        return max_cons;
     }
 };

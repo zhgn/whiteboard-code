@@ -30,26 +30,26 @@ using namespace std;
 class Solution {
 public:
     int uniquePathsWithObstacles(vector<vector<int> > &obstacleGrid) {
-		int row = obstacleGrid.size();
-		if (row == 0) {
-			return 0;
-		}
-		int column = obstacleGrid[0].size();
-		if (column == 0 || obstacleGrid[0][0] == 1)
-		{
-			return 0;
-		}
-		vector<vector<int> > paths_num = vector<vector<int> > (row+1, vector<int>(column+1, 0));
-        		
-		paths_num[1][1] = 1;
-		for (int i=1; i<=row; i++) {
-			for (int j=(i==1 ? 2 : 1); j<=column; j++) {
-				if (obstacleGrid[i-1][j-1] == 0) {
-					paths_num[i][j] = paths_num[i-1][j] + paths_num[i][j-1];
-				}
-			}
-		}
-		return paths_num[row][column];
+        int row = obstacleGrid.size();
+        if (row == 0) {
+            return 0;
+        }
+        int column = obstacleGrid[0].size();
+        if (column == 0 || obstacleGrid[0][0] == 1)
+        {
+            return 0;
+        }
+        vector<vector<int> > paths_num = vector<vector<int> > (row+1, vector<int>(column+1, 0));
+                
+        paths_num[1][1] = 1;
+        for (int i=1; i<=row; i++) {
+            for (int j=(i==1 ? 2 : 1); j<=column; j++) {
+                if (obstacleGrid[i-1][j-1] == 0) {
+                    paths_num[i][j] = paths_num[i-1][j] + paths_num[i][j-1];
+                }
+            }
+        }
+        return paths_num[row][column];
     }
 };
 

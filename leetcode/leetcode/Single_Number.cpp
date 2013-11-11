@@ -12,9 +12,9 @@ class Solution {
 public:
     int singleNumber(int A[], int n) {  
         int single_number = 0;
-		for (int i=0; i<n; i++) {
-			single_number ^= A[i];
-		}
-		return single_number;
+        for (int i=0; i<n; i++) {
+            single_number ^= A[i];
+        }
+        return single_number;
     }
 };

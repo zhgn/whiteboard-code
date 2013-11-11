@@ -5,12 +5,12 @@ using namespace std;
 
 int sstream_usage()
 {
-	string s = "224";
+    string s = "224";
 
-	stringstream stream;
+    stringstream stream;
     stream << s;
     int ip;
     stream >> ip;
 
-	return 0;
+    return 0;
 }

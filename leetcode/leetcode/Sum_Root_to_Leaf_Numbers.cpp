@@ -27,32 +27,32 @@ using namespace std;
  * Definition for binary tree
  */
 struct TreeNode {
-	int val;
-	TreeNode *left;
-	TreeNode *right;
-	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
 
 
 class Solution {
 public:
-	void sumNumbersHelper(TreeNode *root, int cur_prefix, int &cur_sum) {
-		if (root == NULL)
-			return;
-		if (root->left == NULL && root->right == NULL) {
-			cur_sum += cur_prefix * 10 + root->val;
-			return;
-		}
-		sumNumbersHelper(root->left, cur_prefix*10 + root->val, cur_sum);
-		sumNumbersHelper(root->right, cur_prefix*10 + root->val, cur_sum);
-	}
+    void sumNumbersHelper(TreeNode *root, int cur_prefix, int &cur_sum) {
+        if (root == NULL)
+            return;
+        if (root->left == NULL && root->right == NULL) {
+            cur_sum += cur_prefix * 10 + root->val;
+            return;
+        }
+        sumNumbersHelper(root->left, cur_prefix*10 + root->val, cur_sum);
+        sumNumbersHelper(root->right, cur_prefix*10 + root->val, cur_sum);
+    }
 
     int sumNumbers(TreeNode *root) {
-		int sum = 0;
-		sumNumbersHelper(root, 0, sum);
-		
-		return sum;
+        int sum = 0;
+        sumNumbersHelper(root, 0, sum);
+        
+        return sum;
     }
 };
 

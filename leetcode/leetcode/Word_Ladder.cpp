@@ -32,67 +32,67 @@ using namespace std;
 
 class Solution {
 public:
-	struct BFSInfo {
-		int dist;	
-		BFSInfo (int m_dist) : dist(m_dist) {};
-	};
-	unordered_map<string, BFSInfo> shortest;
-	vector<string> ladder;	
-	int ladder_head;
-	int ladder_tail;
-	int word_len;
+    struct BFSInfo {
+        int dist;    
+        BFSInfo (int m_dist) : dist(m_dist) {};
+    };
+    unordered_map<string, BFSInfo> shortest;
+    vector<string> ladder;    
+    int ladder_head;
+    int ladder_tail;
+    int word_len;
 
-	bool conn(string a, string b)
-	{		
-		int count = 0;
-		for (int i=0; i<word_len; i++) {
-			if (a[i] != b[i]) {
-				count++;
-				if (count > 1) {
-					return false;
-				}
-			}
-		}
-		return (count == 1);
-	}
+    bool conn(string a, string b)
+    {        
+        int count = 0;
+        for (int i=0; i<word_len; i++) {
+            if (a[i] != b[i]) {
+                count++;
+                if (count > 1) {
+                    return false;
+                }
+            }
+        }
+        return (count == 1);
+    }
 
     int ladderLength(string start, string end, unordered_set<string> &dict) {
-		shortest.clear();
-		ladder.clear();
-		ladder.resize(0);
-		ladder_head = 0; 		
-		ladder.push_back(start);
-		BFSInfo tmp_info(1);
-		shortest.insert(make_pair(start, tmp_info));
-		int dist = 0;
-		word_len = start.length();
+        shortest.clear();
+        ladder.clear();
+        ladder.resize(0);
+        ladder_head = 0;         
+        ladder.push_back(start);
+        BFSInfo tmp_info(1);
+        shortest.insert(make_pair(start, tmp_info));
+        int dist = 0;
+        word_len = start.length();
 
-		while (ladder_head < ladder.size()) {
-			string cur = ladder[ ladder_head++ ];
-			dist = (shortest.find(cur))->second.dist + 1;			
-			if (conn(end, cur)) {
-				return dist;	
-			}
-			for (int i=0; i<word_len; i++) {
-				for (char ch='a'; ch<='z'; ch++) {
-					if (cur[i] == ch) {
-						continue;
-					}
-					string next_word = cur;
-					next_word[i] = ch;
-					auto c_it = dict.find(next_word);
-					if (c_it != dict.end()) {
-						auto hash_it = shortest.find(next_word);
-						if (hash_it == shortest.end()) {
-							BFSInfo bfs_info(dist);
-							shortest.insert(make_pair(next_word, bfs_info));
-							ladder.push_back(next_word);
-						} 
-					}
-				}
-			}
-		}
+        while (ladder_head < ladder.size()) {
+            string cur = ladder[ ladder_head++ ];
+            dist = (shortest.find(cur))->second.dist + 1;            
+            if (conn(end, cur)) {
+                return dist;    
+            }
+            for (int i=0; i<word_len; i++) {
+                for (char ch='a'; ch<='z'; ch++) {
+                    if (cur[i] == ch) {
+                        continue;
+                    }
+                    string next_word = cur;
+                    next_word[i] = ch;
+                    auto c_it = dict.find(next_word);
+                    if (c_it != dict.end()) {
+                        auto hash_it = shortest.find(next_word);
+                        if (hash_it == shortest.end()) {
+                            BFSInfo bfs_info(dist);
+                            shortest.insert(make_pair(next_word, bfs_info));
+                            ladder.push_back(next_word);
+                        } 
+                    }
+                }
+            }
+        }
 
-		return 0;
+        return 0;
     }
 };

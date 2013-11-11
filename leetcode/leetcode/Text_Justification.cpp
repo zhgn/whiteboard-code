@@ -38,43 +38,43 @@ using namespace std;
 
 class Solution {
 private:
-	string construct_line(vector<string> &words, int start, int end, int space, bool last) {
-		string ret = words[start];
-		if (start == end - 1) {
-			return ret.append(space, ' ');
-		}
-		int space_num = last ? 1 : space / (end - start - 1) + 1;
-		int extra = last ? 0 : space % (end - start - 1);
-		for (int i=start+1; i<end; i++) {
-			ret.append(space_num + (extra > 0 ? 1 : 0), ' ');
-			extra--;
-			ret.append(words[i]);
-		}
-		if (last) {
-			ret.append(space, ' ');
-		}
-		return ret;
-	}
+    string construct_line(vector<string> &words, int start, int end, int space, bool last) {
+        string ret = words[start];
+        if (start == end - 1) {
+            return ret.append(space, ' ');
+        }
+        int space_num = last ? 1 : space / (end - start - 1) + 1;
+        int extra = last ? 0 : space % (end - start - 1);
+        for (int i=start+1; i<end; i++) {
+            ret.append(space_num + (extra > 0 ? 1 : 0), ' ');
+            extra--;
+            ret.append(words[i]);
+        }
+        if (last) {
+            ret.append(space, ' ');
+        }
+        return ret;
+    }
 
 public:
     vector<string> fullJustify(vector<string> &words, int L) {
-		vector<string> text;
-		int cur_line_len = 0;
-		int start_index = 0;		
+        vector<string> text;
+        int cur_line_len = 0;
+        int start_index = 0;        
 
-		for (int i=0; i<words.size(); i++) {
-			int cur_word_len = words[i].length();			
-			if (cur_line_len + cur_word_len > L) {
-				text.push_back(construct_line(words, start_index, i, L - cur_line_len + 1, false));
-				cur_line_len = cur_word_len + 1;
-				start_index = i;
-			} else {
-				cur_line_len += cur_word_len + 1;
-			}
-		}
-		if (words.size() > start_index) {
-			text.push_back(construct_line(words, start_index, words.size(), L - cur_line_len + 1, true));
-		}
-		return text;
+        for (int i=0; i<words.size(); i++) {
+            int cur_word_len = words[i].length();            
+            if (cur_line_len + cur_word_len > L) {
+                text.push_back(construct_line(words, start_index, i, L - cur_line_len + 1, false));
+                cur_line_len = cur_word_len + 1;
+                start_index = i;
+            } else {
+                cur_line_len += cur_word_len + 1;
+            }
+        }
+        if (words.size() > start_index) {
+            text.push_back(construct_line(words, start_index, words.size(), L - cur_line_len + 1, true));
+        }
+        return text;
     }
 };

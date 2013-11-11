@@ -12,7 +12,7 @@ using namespace std;
 
 class Solution {
 private:
-	void totalNQueensHelper(vector<int> &queen, int p, int n, int &result)
+    void totalNQueensHelper(vector<int> &queen, int p, int n, int &result)
     {
         for (int i=0; i<n; i++)
         {

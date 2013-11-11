@@ -27,47 +27,47 @@ struct Interval {
 class Solution {
 public:
     vector<Interval> insert(vector<Interval> &intervals, Interval newInterval) {
-		int n = intervals.size();
-		int s,e;
-		for (s=0; s<n; s++)
-		{
-			if (intervals[s].end >= newInterval.start)
-				break;
-		}		
-		if (s == n)
-		{
-			intervals.push_back(newInterval);
-			return intervals;
-		}
-		if (intervals[s].start < newInterval.start)
-		{
-			newInterval.start = intervals[s].start;
-		}
-		for (e=s; e<n; e++)
-		{
-			if (intervals[e].start > newInterval.end)
-			{
-				break;
-			}
-		}
-		if (e>0 && intervals[e-1].end > newInterval.end && intervals[e-1].start <= newInterval.end)
-		{
-			newInterval.end = intervals[e-1].end;
-		}
-		vector<Interval> result;
-		for (int i=0;i<s;i++)
-		{
-			result.push_back(intervals[i]);
-		}
-		result.push_back(newInterval);
-		for (int i=s;i<n;i++)
-		{
-			if (intervals[i].start <= newInterval.end)
-			{
-				continue;
-			}
-			result.push_back(intervals[i]);
-		}
-		return result;
-	}	
+        int n = intervals.size();
+        int s,e;
+        for (s=0; s<n; s++)
+        {
+            if (intervals[s].end >= newInterval.start)
+                break;
+        }        
+        if (s == n)
+        {
+            intervals.push_back(newInterval);
+            return intervals;
+        }
+        if (intervals[s].start < newInterval.start)
+        {
+            newInterval.start = intervals[s].start;
+        }
+        for (e=s; e<n; e++)
+        {
+            if (intervals[e].start > newInterval.end)
+            {
+                break;
+            }
+        }
+        if (e>0 && intervals[e-1].end > newInterval.end && intervals[e-1].start <= newInterval.end)
+        {
+            newInterval.end = intervals[e-1].end;
+        }
+        vector<Interval> result;
+        for (int i=0;i<s;i++)
+        {
+            result.push_back(intervals[i]);
+        }
+        result.push_back(newInterval);
+        for (int i=s;i<n;i++)
+        {
+            if (intervals[i].start <= newInterval.end)
+            {
+                continue;
+            }
+            result.push_back(intervals[i]);
+        }
+        return result;
+    }    
 };

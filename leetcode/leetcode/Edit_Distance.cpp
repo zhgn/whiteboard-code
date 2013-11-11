@@ -18,21 +18,21 @@ using namespace std;
 class Solution {
 public:
     int minDistance(string word1, string word2) {
-		int len_1 = word1.length();
-		int len_2 = word2.length();
-		vector<vector<int> > dis (len_1 + 1, vector<int> (len_2 + 1, 0)); 
-		for (int i=0; i<=len_1; i++) {
-			dis[i][0] = i;
-		}
-		for (int i=0; i<=len_2; i++) {
-			dis[0][i] = i;
-		}
+        int len_1 = word1.length();
+        int len_2 = word2.length();
+        vector<vector<int> > dis (len_1 + 1, vector<int> (len_2 + 1, 0)); 
+        for (int i=0; i<=len_1; i++) {
+            dis[i][0] = i;
+        }
+        for (int i=0; i<=len_2; i++) {
+            dis[0][i] = i;
+        }
 
-		for (int i=1; i<=len_1; i++) {
-			for (int j=1; j<=len_2; j++) {
-				dis[i][j] = min(min(dis[i-1][j] + 1, dis[i][j-1] + 1), dis[i-1][j-1] + (word1[i-1] == word2[j-1] ? 0 : 1));	
-			}
-		}
-		return dis[len_1][len_2];
+        for (int i=1; i<=len_1; i++) {
+            for (int j=1; j<=len_2; j++) {
+                dis[i][j] = min(min(dis[i-1][j] + 1, dis[i][j-1] + 1), dis[i-1][j-1] + (word1[i-1] == word2[j-1] ? 0 : 1));    
+            }
+        }
+        return dis[len_1][len_2];
     }
 };

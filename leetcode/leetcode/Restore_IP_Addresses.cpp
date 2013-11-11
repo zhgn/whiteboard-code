@@ -16,7 +16,7 @@ using namespace std;
 
 class Solution {
 private:
-	bool isValidIP(string s) {
+    bool isValidIP(string s) {
         if (s.length() > 1 && s[0] == '0')
             return false;
         stringstream stream;

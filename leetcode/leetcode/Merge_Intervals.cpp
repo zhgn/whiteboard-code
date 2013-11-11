@@ -21,7 +21,7 @@ struct Interval {
 
 class Solution {
 private:
-	static bool interval_cmp(const Interval &a, const Interval &b) {
+    static bool interval_cmp(const Interval &a, const Interval &b) {
         if (a.start < b.start)
         {
             return true;
@@ -35,12 +35,12 @@ private:
 
 public:
     vector<Interval> merge(vector<Interval> &intervals) {
-		sort(intervals.begin(), intervals.end(), &Solution::interval_cmp);
+        sort(intervals.begin(), intervals.end(), &Solution::interval_cmp);
         vector <Interval> result;
         
         int n = intervals.size();
         int i = 0;
-		while (i<n)
+        while (i<n)
         {
             Interval tmp(intervals[i].start, intervals[i].end);
             int j = i + 1;

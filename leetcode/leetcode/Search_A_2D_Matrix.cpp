@@ -27,20 +27,20 @@ using namespace std;
 class Solution {
 public:
     bool searchMatrix(vector<vector<int> > &matrix, int target) {
-		int row = matrix.size();
-		if (row == 0) {
-			return false;
-		}
-		int column = matrix[0].size();
-		int x = column - 1;
-		int y = 0;
-		while (y < row && x >= 0 && target != matrix[y][x]) {
-			if (target > matrix[y][x]) {
-				y++;
-			} else {
-				x--;
-			}
-		}
+        int row = matrix.size();
+        if (row == 0) {
+            return false;
+        }
+        int column = matrix[0].size();
+        int x = column - 1;
+        int y = 0;
+        while (y < row && x >= 0 && target != matrix[y][x]) {
+            if (target > matrix[y][x]) {
+                y++;
+            } else {
+                x--;
+            }
+        }
         return (y < row && x >= 0);
     }
 };

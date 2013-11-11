@@ -43,28 +43,28 @@ Given two strings s1 and s2 of the same length, determine if s2 is a scrambled s
 
 using namespace std;
 
-class Solution {	
+class Solution {    
 public:
     bool isScramble(string s1, string s2) {
-		// isValid[len][i][j] : in s1 start from i, in s2 start from j, length is len
-		int len = s1.length();
-		vector<vector<vector<bool> > > is_valid (len+1, vector<vector<bool> > (len, vector<bool> (len, false)));
+        // isValid[len][i][j] : in s1 start from i, in s2 start from j, length is len
+        int len = s1.length();
+        vector<vector<vector<bool> > > is_valid (len+1, vector<vector<bool> > (len, vector<bool> (len, false)));
         for (int k=1; k<=len; k++) {
-			for (int i=0; i+k<=len; i++) {
-				for (int j=0; j+k<=len; j++) {
-					if (s1.substr(i,k) == s2.substr(j,k)) {
-						is_valid[k][i][j] = true;
-						continue;
-					}
-					for (int cut=1; cut<k; cut++) {
-						if ((is_valid[cut][i][j+k-cut] && is_valid[k-cut][i+cut][j]) || (is_valid[cut][i][j] && is_valid[k-cut][i+cut][j+cut])) {
-							is_valid[k][i][j] = true;
-							break;
-						}
-					}
-				}
-			}
-		}
-		return is_valid[len][0][0];
+            for (int i=0; i+k<=len; i++) {
+                for (int j=0; j+k<=len; j++) {
+                    if (s1.substr(i,k) == s2.substr(j,k)) {
+                        is_valid[k][i][j] = true;
+                        continue;
+                    }
+                    for (int cut=1; cut<k; cut++) {
+                        if ((is_valid[cut][i][j+k-cut] && is_valid[k-cut][i+cut][j]) || (is_valid[cut][i][j] && is_valid[k-cut][i+cut][j+cut])) {
+                            is_valid[k][i][j] = true;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        return is_valid[len][0][0];
     }
 };

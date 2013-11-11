@@ -48,19 +48,19 @@ struct TreeLinkNode {
 class Solution {
 public:
     void connect(TreeLinkNode *root) {
-		if (root == NULL)
-			return;
-		if (root->left != NULL) {
-			root->left->next = root->right;
-		}
-		if (root->right != NULL) {
-			if (root->next == NULL) {
-				root->right->next = NULL;
-			} else {
-				root->right->next = root->next->left;
-			}
-		}
-		connect(root->left);
-		connect(root->right);        
+        if (root == NULL)
+            return;
+        if (root->left != NULL) {
+            root->left->next = root->right;
+        }
+        if (root->right != NULL) {
+            if (root->next == NULL) {
+                root->right->next = NULL;
+            } else {
+                root->right->next = root->next->left;
+            }
+        }
+        connect(root->left);
+        connect(root->right);        
     }
 };

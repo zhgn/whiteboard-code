@@ -19,7 +19,7 @@ using namespace std;
 class Solution {
 public:
     bool isInterleave(string s1, string s2, string s3) {
-		int len_3 = s3.length();
+        int len_3 = s3.length();
         int len_1 = s1.length();
         int len_2 = s2.length();
         if (len_3 != len_1+len_2)
@@ -44,5 +44,5 @@ public:
             }
         }
         return is_interleave[len_3][len_1];
-    }		
+    }        
 };

@@ -5,14 +5,14 @@ using namespace std;
 
 int stack_usage()
 {
-	stack<int> st;
+    stack<int> st;
 
-	st.push(5);
-	int x = st.top();
-	st.pop();
-	if (st.empty()) {
-		;
-	}
+    st.push(5);
+    int x = st.top();
+    st.pop();
+    if (st.empty()) {
+        ;
+    }
 
-	return 0;
+    return 0;
 }

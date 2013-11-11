@@ -16,16 +16,16 @@ class Solution {
 public:
     int lengthOfLastWord(const char *s) {
         int len = 0;
-		while (s[len] != '\0') {
-			len++;
-		}
-		while (len > 0 && s[len - 1] == ' ') {
-			len--;
-		}
-		int last_space = len - 1;
-		while (last_space >= 0 && s[last_space] != ' ') {
-			last_space--;
-		}
-		return len - last_space - 1;
+        while (s[len] != '\0') {
+            len++;
+        }
+        while (len > 0 && s[len - 1] == ' ') {
+            len--;
+        }
+        int last_space = len - 1;
+        while (last_space >= 0 && s[last_space] != ' ') {
+            last_space--;
+        }
+        return len - last_space - 1;
     }
 };

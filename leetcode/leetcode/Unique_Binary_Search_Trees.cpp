@@ -15,16 +15,16 @@ Given n, how many structurally unique BST's (binary search trees) that store val
 
 class Solution {
 private:
-	int calatan(int n) {
-		long long ret = 1;
-		for (int i=1; i<=n; i++) {
-			ret *= n+i;
-		}
-		for (int i=1; i<=n; i++) {
-			ret /= i;
-		}
-		return ret/(n+1);
-	}
+    int calatan(int n) {
+        long long ret = 1;
+        for (int i=1; i<=n; i++) {
+            ret *= n+i;
+        }
+        for (int i=1; i<=n; i++) {
+            ret /= i;
+        }
+        return ret/(n+1);
+    }
 
 public:
     int numTrees(int n) {

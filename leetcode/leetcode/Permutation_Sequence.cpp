@@ -43,7 +43,7 @@ public:
                     real_num++;
                 }while (used[real_num]);
             }
-			result.append(1, '0' + (real_num));
+            result.append(1, '0' + (real_num));
             used[real_num] = true;
             k = (k-1) % total_num + 1;
             if (i > 0)

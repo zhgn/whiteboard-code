@@ -27,30 +27,30 @@ class Solution {
 public:
     vector<vector<int> > combinationSum(vector<int> &candidates, int target) {
         vector<vector<vector<int> > > result;
-		
-		sort(candidates.begin(), candidates.end());
-		candidates.erase(unique(candidates.begin(), candidates.end()), candidates.end());
-		int n = candidates.size();
-		for (int j=0; j<=target; j++)
-		{
-			vector<vector<int> > tmp;
-			result.push_back(tmp);
-		}		
-		for (int i=0; i<n && candidates[i]<=target; i++)
-		{
-			vector<int> tmp;
-			tmp.push_back(candidates[i]);
-			result[candidates[i]].push_back(tmp);
-			for (int j=1; j+candidates[i] <= target; j++)
-			{
-				for (int k=0; k<result[j].size(); k++)
-				{
-					vector<int> tmp = result[j][k];
-					tmp.push_back(candidates[i]);
-					result[ j + candidates[i] ].push_back(tmp);
-				}
-			}
-		}
+        
+        sort(candidates.begin(), candidates.end());
+        candidates.erase(unique(candidates.begin(), candidates.end()), candidates.end());
+        int n = candidates.size();
+        for (int j=0; j<=target; j++)
+        {
+            vector<vector<int> > tmp;
+            result.push_back(tmp);
+        }        
+        for (int i=0; i<n && candidates[i]<=target; i++)
+        {
+            vector<int> tmp;
+            tmp.push_back(candidates[i]);
+            result[candidates[i]].push_back(tmp);
+            for (int j=1; j+candidates[i] <= target; j++)
+            {
+                for (int k=0; k<result[j].size(); k++)
+                {
+                    vector<int> tmp = result[j][k];
+                    tmp.push_back(candidates[i]);
+                    result[ j + candidates[i] ].push_back(tmp);
+                }
+            }
+        }
 
         return result[target];
     }

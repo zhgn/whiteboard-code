@@ -16,14 +16,14 @@ A = [3,2,1,0,4], return false.
 class Solution {
 public:
     bool canJump(int A[], int n) {
-		int fareast = 0;
-		int i = 0;
-		while (i <= fareast && fareast < n-1) {
-			if (fareast < i + A[i]) {
-				fareast = i + A[i];
-			}
-			i++;
-		}
-		return (fareast >= n-1);
+        int fareast = 0;
+        int i = 0;
+        while (i <= fareast && fareast < n-1) {
+            if (fareast < i + A[i]) {
+                fareast = i + A[i];
+            }
+            i++;
+        }
+        return (fareast >= n-1);
     }
 };

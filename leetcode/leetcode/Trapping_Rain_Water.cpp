@@ -12,33 +12,33 @@ using namespace std;
 
 class Solution {
 private:
-	int toward_highest_trap(int A[], int start, int end, int step) {
-		int wall = 0;
-		int water_sum = 0;
-		for (int i=start; i!=end; i+=step) {
-			if (A[i] > wall) {
-				wall = A[i];
-			} else {
-				water_sum += wall - A[i];
-			}
-		}
-		return water_sum;
-	}
+    int toward_highest_trap(int A[], int start, int end, int step) {
+        int wall = 0;
+        int water_sum = 0;
+        for (int i=start; i!=end; i+=step) {
+            if (A[i] > wall) {
+                wall = A[i];
+            } else {
+                water_sum += wall - A[i];
+            }
+        }
+        return water_sum;
+    }
 
 public:
     int trap(int A[], int n) {
-		if (n == 0) {
-			return 0;
-		}
+        if (n == 0) {
+            return 0;
+        }
 
-		int highest = -1;
-		int highest_pos = -1;		
-		for (int i=0; i<n; i++) {
-			if (highest < A[i]) {
-				highest = A[i];
-				highest_pos = i;
-			}
-		}
-		return (toward_highest_trap(A, 0, highest_pos, 1) + toward_highest_trap(A, n-1, highest_pos, -1));
+        int highest = -1;
+        int highest_pos = -1;        
+        for (int i=0; i<n; i++) {
+            if (highest < A[i]) {
+                highest = A[i];
+                highest_pos = i;
+            }
+        }
+        return (toward_highest_trap(A, 0, highest_pos, 1) + toward_highest_trap(A, n-1, highest_pos, -1));
     }
 };

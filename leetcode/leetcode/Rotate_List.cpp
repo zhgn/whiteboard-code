@@ -16,40 +16,40 @@ struct ListNode {
 
 class Solution {
 private:
-	int getListLen(ListNode *head) {
-		ListNode *cur = head;
-		int count = 0;
-		while (cur != NULL) {
-			cur = cur->next;
-			count++;
-		}
-		return count;
-	}
+    int getListLen(ListNode *head) {
+        ListNode *cur = head;
+        int count = 0;
+        while (cur != NULL) {
+            cur = cur->next;
+            count++;
+        }
+        return count;
+    }
 
 public:
     ListNode *rotateRight(ListNode *head, int k) {
-		if (head == NULL) {
-			return NULL;
-		}
-		int len = getListLen(head);
-		k %= len;
-		if (k == 0) {
-			return head;
-		}
+        if (head == NULL) {
+            return NULL;
+        }
+        int len = getListLen(head);
+        k %= len;
+        if (k == 0) {
+            return head;
+        }
 
-		ListNode *p_to_tail = head;
-		for (int count=0; count<k; count++) {
-			p_to_tail = p_to_tail->next;
-		}
-		ListNode *cur = head;
-		while (p_to_tail->next != NULL) {
-			p_to_tail = p_to_tail->next;
-			cur = cur->next;
-		}
+        ListNode *p_to_tail = head;
+        for (int count=0; count<k; count++) {
+            p_to_tail = p_to_tail->next;
+        }
+        ListNode *cur = head;
+        while (p_to_tail->next != NULL) {
+            p_to_tail = p_to_tail->next;
+            cur = cur->next;
+        }
 
-		p_to_tail->next = head;
-		head = cur->next;
-		cur->next = NULL;
-		return head;
+        p_to_tail->next = head;
+        head = cur->next;
+        cur->next = NULL;
+        return head;
     }
 };

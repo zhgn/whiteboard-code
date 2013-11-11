@@ -58,6 +58,9 @@
     <Filter Include="Source Files\Heap">
       <UniqueIdentifier>{84a78523-2f5a-4a82-b1ab-56ce2ff0da94}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\List">
+      <UniqueIdentifier>{7bad8bbd-2e0f-4d7f-8a77-2f12721bee93}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -206,9 +209,6 @@
     <ClCompile Include="Symmetric_Tree.cpp">
       <Filter>Source Files\TreeRecursive</Filter>
     </ClCompile>
-    <ClCompile Include="Copy_List_With_Random_Pointer.cpp">
-      <Filter>Source Files\BruteForce</Filter>
-    </ClCompile>
     <ClCompile Include="Word_Break.cpp">
       <Filter>Source Files\DP</Filter>
     </ClCompile>
@@ -236,9 +236,6 @@
     <ClCompile Include="Restore_IP_Addresses.cpp">
       <Filter>Source Files\BruteForce</Filter>
     </ClCompile>
-    <ClCompile Include="Reverse_Linked_List_II.cpp">
-      <Filter>Source Files\BruteForce</Filter>
-    </ClCompile>
     <ClCompile Include="sstream_usage.cpp">
       <Filter>Source Files\General</Filter>
     </ClCompile>
@@ -256,15 +253,6 @@
     </ClCompile>
     <ClCompile Include="Scramble_String.cpp">
       <Filter>Source Files\DP</Filter>
-    </ClCompile>
-    <ClCompile Include="Partition_List.cpp">
-      <Filter>Source Files\BruteForce</Filter>
-    </ClCompile>
-    <ClCompile Include="Remove_Duplicates_From_Sorted_List.cpp">
-      <Filter>Source Files\BruteForce</Filter>
-    </ClCompile>
-    <ClCompile Include="Remove_Duplicates_From_Sorted_List_II.cpp">
-      <Filter>Source Files\BruteForce</Filter>
     </ClCompile>
     <ClCompile Include="Search_In_Rotated_Sorted_Array.cpp">
       <Filter>Source Files\DivideAndConquer</Filter>
@@ -320,9 +308,6 @@
     <ClCompile Include="Add_Binary.cpp">
       <Filter>Source Files\BruteForce</Filter>
     </ClCompile>
-    <ClCompile Include="Merge_Two_Sorted_Lists.cpp">
-      <Filter>Source Files\BruteForce</Filter>
-    </ClCompile>
     <ClCompile Include="Minimum_Path_Sum.cpp">
       <Filter>Source Files\DP</Filter>
     </ClCompile>
@@ -331,9 +316,6 @@
     </ClCompile>
     <ClCompile Include="Unique_Paths_II.cpp">
       <Filter>Source Files\DP</Filter>
-    </ClCompile>
-    <ClCompile Include="Rotate_List.cpp">
-      <Filter>Source Files\BruteForce</Filter>
     </ClCompile>
     <ClCompile Include="Permutation_Sequence.cpp">
       <Filter>Source Files\Math</Filter>
@@ -379,9 +361,6 @@
     </ClCompile>
     <ClCompile Include="Jump_Game_II.cpp">
       <Filter>Source Files\DP</Filter>
-    </ClCompile>
-    <ClCompile Include="Wildcard_Matching.cpp">
-      <Filter>Source Files\Greedy</Filter>
     </ClCompile>
     <ClCompile Include="Mulitply_Strings.cpp">
       <Filter>Source Files\BruteForce</Filter>
@@ -449,12 +428,6 @@
     <ClCompile Include="Remove_Duplicates_From_Sorted_Array.cpp">
       <Filter>Source Files\BruteForce</Filter>
     </ClCompile>
-    <ClCompile Include="Reverse_Nodes_In_K-Group.cpp">
-      <Filter>Source Files\BruteForce</Filter>
-    </ClCompile>
-    <ClCompile Include="Swap_Nodes_In_Pairs.cpp">
-      <Filter>Source Files\BruteForce</Filter>
-    </ClCompile>
     <ClCompile Include="Merge_K_Sorted_Lists.cpp">
       <Filter>Source Files\Heap</Filter>
     </ClCompile>
@@ -464,20 +437,101 @@
     <ClCompile Include="Valid_Parentheses.cpp">
       <Filter>Source Files\Stack</Filter>
     </ClCompile>
-    <ClCompile Include="Remove_Nth_Node_From_End_Of_List.cpp">
-      <Filter>Source Files\BruteForce</Filter>
-    </ClCompile>
     <ClCompile Include="Letter_Combinations_Of_A_Phone_Number.cpp">
       <Filter>Source Files\BruteForce</Filter>
     </ClCompile>
     <ClCompile Include="4_Sum.cpp">
       <Filter>Source Files\Hash</Filter>
     </ClCompile>
-    <ClCompile Include="3_Sum_Closest.cpp">
+    <ClCompile Include="Longest_Common_Prefix.cpp">
       <Filter>Source Files\BruteForce</Filter>
     </ClCompile>
-    <ClCompile Include="3_Sum.cpp">
+    <ClCompile Include="Roman_To_Integer.cpp">
       <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Integer_To_Roman.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Reorder_List.cpp">
+      <Filter>Source Files\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Copy_List_With_Random_Pointer.cpp">
+      <Filter>Source Files\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Merge_Two_Sorted_Lists.cpp">
+      <Filter>Source Files\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Reverse_Linked_List_II.cpp">
+      <Filter>Source Files\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Rotate_List.cpp">
+      <Filter>Source Files\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Partition_List.cpp">
+      <Filter>Source Files\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Reverse_Nodes_In_K-Group.cpp">
+      <Filter>Source Files\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Remove_Duplicates_From_Sorted_List.cpp">
+      <Filter>Source Files\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Remove_Duplicates_From_Sorted_List_II.cpp">
+      <Filter>Source Files\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Remove_Nth_Node_From_End_Of_List.cpp">
+      <Filter>Source Files\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Swap_Nodes_In_Pairs.cpp">
+      <Filter>Source Files\List</Filter>
+    </ClCompile>
+    <ClCompile Include="3_Sum.cpp">
+      <Filter>Source Files\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="3_Sum_Closest.cpp">
+      <Filter>Source Files\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Binary_Tree_Preorder_Traversal.cpp">
+      <Filter>Source Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="Container_With_Most_Water.cpp">
+      <Filter>Source Files\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="Regular_Expression_Matching.cpp">
+      <Filter>Source Files\Greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="Wildcard_Matching.cpp">
+      <Filter>Source Files\DFS</Filter>
+    </ClCompile>
+    <ClCompile Include="Palindrome_Number.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="String_To_Integer_(Atoi).cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Reverse_Integer.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Binary_Tree_Postorder_Travelsal.cpp">
+      <Filter>Source Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="ZigZag_Conversion.cpp">
+      <Filter>Source Files\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="Longest_Palindromic_Substring.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Add_Two_Numbers.cpp">
+      <Filter>Source Files\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Longest_Substring_Without_Repeating_Characters.cpp">
+      <Filter>Source Files\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="Median_Of_Two_Sorted_Arrays.cpp">
+      <Filter>Source Files\DivideAndConquer</Filter>
+    </ClCompile>
+    <ClCompile Include="Two_Sum.cpp">
+      <Filter>Source Files\Other</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

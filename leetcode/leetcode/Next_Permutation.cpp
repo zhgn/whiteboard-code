@@ -19,7 +19,7 @@ using namespace std;
 
 class Solution {
 private:
-	void swap(vector<int> &num, int p1, int p2)
+    void swap(vector<int> &num, int p1, int p2)
     {
         int swap = num[p1];
         num[p1] = num[p2];

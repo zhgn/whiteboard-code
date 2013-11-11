@@ -18,29 +18,29 @@ using namespace std;
 
 class Solution {
 public:
-	int prev(int x, int n) {		
-		return (x == 0) ? n-1 : x-1;
-	}
+    int prev(int x, int n) {        
+        return (x == 0) ? n-1 : x-1;
+    }
 
-	int next(int x, int n) {		
-		return ( x == n-1) ? 0 : x+1;
-	}
+    int next(int x, int n) {        
+        return ( x == n-1) ? 0 : x+1;
+    }
 
     int canCompleteCircuit(vector<int> &gas, vector<int> &cost) {        
         int start = 0;
-		int station_num = gas.size();
-		int gas_diff = 0;
-		int end = 0;
-		do {			
-			if (gas_diff < 0) {
-				start = prev(start, station_num);
-				gas_diff += gas[start] - cost[start];
-			} else {
-				gas_diff += gas[end] - cost[end];
-				end = next(end, station_num);
-			}			
-		} while (start != end);
+        int station_num = gas.size();
+        int gas_diff = 0;
+        int end = 0;
+        do {            
+            if (gas_diff < 0) {
+                start = prev(start, station_num);
+                gas_diff += gas[start] - cost[start];
+            } else {
+                gas_diff += gas[end] - cost[end];
+                end = next(end, station_num);
+            }            
+        } while (start != end);
 
-		return (gas_diff >= 0) ? start : -1;
+        return (gas_diff >= 0) ? start : -1;
     }
 };
