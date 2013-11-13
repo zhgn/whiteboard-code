@@ -22,6 +22,7 @@ int unordered_map_usage()
     stringmap sixth (fifth.begin(),fifth.end());  // range    
 
     std::unordered_map<std::string,std::string>::const_iterator got = first.find ("input");
+    first.insert(std::make_pair("key", "val"));
 
     if ( got == first.end() )
         std::cout << "not found";

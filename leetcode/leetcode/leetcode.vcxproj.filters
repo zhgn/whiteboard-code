@@ -533,5 +533,8 @@
     <ClCompile Include="Two_Sum.cpp">
       <Filter>Source Files\Other</Filter>
     </ClCompile>
+    <ClCompile Include="LRU_Cache.cpp">
+      <Filter>Source Files\Hash</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,21 +1,12 @@
-﻿Build started 11/8/2013 6:21:52 PM.
+﻿Build started 11/12/2013 3:45:44 PM.
      1>Project "C:\Users\yuazh\Documents\GitHub\whiteboard-code\leetcode\leetcode\leetcode.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\leetcode.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          All outputs are up-to-date.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\leetcode.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Add_Two_Numbers.cpp Binary_Tree_Postorder_Travelsal.cpp Longest_Palindromic_Substring.cpp Longest_Substring_Without_Repeating_Characters.cpp Median_Of_Two_Sorted_Arrays.cpp Reverse_Integer.cpp "String_To_Integer_(Atoi).cpp" ZigZag_Conversion.cpp
-         ZigZag_Conversion.cpp
-         String_To_Integer_(Atoi).cpp
-     1>c:\users\yuazh\documents\github\whiteboard-code\leetcode\leetcode\string_to_integer_(atoi).cpp(51): warning C4244: 'return' : conversion from '__int64' to 'int', possible loss of data
-         Reverse_Integer.cpp
-     1>c:\users\yuazh\documents\github\whiteboard-code\leetcode\leetcode\reverse_integer.cpp(31): warning C4244: 'return' : conversion from '__int64' to 'int', possible loss of data
-         Median_Of_Two_Sorted_Arrays.cpp
-         Longest_Substring_Without_Repeating_Characters.cpp
-         Longest_Palindromic_Substring.cpp
-         Binary_Tree_Postorder_Travelsal.cpp
-         Add_Two_Numbers.cpp
-         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\leetcode.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt leetcode.cpp
+         leetcode.cpp
+     1>c:\users\yuazh\documents\github\whiteboard-code\leetcode\leetcode\leetcode.cpp(108): warning C4018: '>' : signed/unsigned mismatch
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
@@ -76,6 +67,7 @@
          Debug\Longest_Palindromic_Substring.obj
          Debug\Longest_Substring_Without_Repeating_Characters.obj
          Debug\Longest_Valid_Parentheses.obj
+         Debug\LRU_Cache.obj
          Debug\Maximal_Rectangle.obj
          Debug\Maximum_Depth_Of_Binary_Tree.obj
          Debug\Maximum_Subarray.obj
@@ -153,6 +145,7 @@
          Debug\Text_Justification.obj
          Debug\Trapping_Rain_Water.obj
          Debug\Triangle.obj
+         Debug\Two_Sum.obj
          Debug\Unique_Binary_Search_Trees.obj
          Debug\Unique_Binary_Search_Trees_II.obj
          Debug\Unique_Paths.obj
@@ -184,4 +177,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:06.24
+Time Elapsed 00:00:02.74

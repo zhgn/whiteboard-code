@@ -67,13 +67,60 @@ public:
     }
 };
 
+class LRUCache{
+private:
+    int m_capacity;
+    list<int> data_list;
+    unordered_map<int, list<int>::iterator> data_hash;
+
+public:
+    LRUCache(int capacity) {
+        m_capacity = capacity;
+        data_list.clear();
+        data_hash.clear();
+    }
+    
+    int get(int key) {
+        auto it_member = data_hash.find(key);
+        if (it_member == data_hash.end()) {
+            return -1;
+        }
+        auto it_value = it_member->second;
+        int value = (*it_value);
+        
+        data_list.erase(it_value);
+        data_list.push_front(value);
+        it_member->second = data_list.begin();
+        return value;
+    }
+    
+    void set(int key, int value) {                
+        data_list.push_front(value);
+        auto it_member = data_hash.find(key);        
+        if (it_member == data_hash.end()) {
+            data_hash.insert(make_pair(key, data_list.begin()));
+        } else {
+            auto it_value = it_member->second;
+            data_list.erase(it_value);            
+            it_member->second = data_list.begin(); 
+        }                   
+
+        if (data_list.size() > m_capacity) {
+            int del_key = data_list.back();
+            data_hash.erase(del_key);
+            data_list.pop_back();
+        }
+    }
+};
+
 int _tmain(int argc, _TCHAR* argv[])
 {
-    Solution s;    
-    ListNode *head = new ListNode(1);
-    ListNode *p = new ListNode(2);
-    head->next = p;
-    s.reverseKGroup(head, 2);
+    LRUCache lru(1);
+    lru.set(2,1);
+    lru.get(2);
+    lru.set(3,2);
+    lru.get(2);
+    lru.get(3);
     return 0;
 }
 

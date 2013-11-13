@@ -136,6 +136,7 @@
     <ClCompile Include="Longest_Palindromic_Substring.cpp" />
     <ClCompile Include="Longest_Substring_Without_Repeating_Characters.cpp" />
     <ClCompile Include="Longest_Valid_Parentheses.cpp" />
+    <ClCompile Include="LRU_Cache.cpp" />
     <ClCompile Include="Maximal_Rectangle.cpp" />
     <ClCompile Include="Maximum_Depth_Of_Binary_Tree.cpp" />
     <ClCompile Include="Maximum_Subarray.cpp" />
