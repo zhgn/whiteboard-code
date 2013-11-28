@@ -1,12 +1,14 @@
-﻿Build started 11/12/2013 3:45:44 PM.
+﻿Build started 11/28/2013 6:26:11 PM.
      1>Project "C:\Users\yuazh\Documents\GitHub\whiteboard-code\leetcode\leetcode\leetcode.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\leetcode.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          All outputs are up-to-date.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\leetcode.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt leetcode.cpp
-         leetcode.cpp
-     1>c:\users\yuazh\documents\github\whiteboard-code\leetcode\leetcode\leetcode.cpp(108): warning C4018: '>' : signed/unsigned mismatch
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\leetcode.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Evaluate_Reverse_Polish_Notation.cpp Max_Points_On_A_Line.cpp
+         Max_Points_On_A_Line.cpp
+         Evaluate_Reverse_Polish_Notation.cpp
+     1>c:\users\yuazh\documents\github\whiteboard-code\leetcode\leetcode\evaluate_reverse_polish_notation.cpp(56): warning C4018: '<' : signed/unsigned mismatch
+         Generating Code...
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
@@ -45,12 +47,14 @@
          Debug\Distinct_Subsequences.obj
          Debug\Divide_Two_Integers.obj
          Debug\Edit_Distance.obj
+         Debug\Evaluate_Reverse_Polish_Notation.obj
          Debug\First_Missing_Positive.obj
          Debug\Flatten_Binary_Tree_To_Linked_List.obj
          Debug\Gas_Station.obj
          Debug\Generate_Parentheses.obj
          Debug\Gray_Code.obj
          Debug\Implement_Strstr.obj
+         Debug\Insertion_Sort_List.obj
          Debug\Insert_Interval.obj
          Debug\Integer_To_Roman.obj
          Debug\Interleaving_String.obj
@@ -71,6 +75,7 @@
          Debug\Maximal_Rectangle.obj
          Debug\Maximum_Depth_Of_Binary_Tree.obj
          Debug\Maximum_Subarray.obj
+         Debug\Max_Points_On_A_Line.obj
          Debug\Median_Of_Two_Sorted_Arrays.obj
          Debug\Merge_Intervals.obj
          Debug\Merge_K_Sorted_Lists.obj
@@ -126,6 +131,7 @@
          Debug\Single_Number.obj
          Debug\Single_Number_II.obj
          Debug\Sort_Colors.obj
+         Debug\Sort_List.obj
          Debug\Spiral_Matrix.obj
          Debug\Spiral_Matrix_II.obj
          Debug\Sqrt_x.obj
@@ -177,4 +183,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.74
+Time Elapsed 00:00:03.55

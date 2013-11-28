@@ -114,12 +114,14 @@
     <ClCompile Include="Distinct_Subsequences.cpp" />
     <ClCompile Include="Divide_Two_Integers.cpp" />
     <ClCompile Include="Edit_Distance.cpp" />
+    <ClCompile Include="Evaluate_Reverse_Polish_Notation.cpp" />
     <ClCompile Include="First_Missing_Positive.cpp" />
     <ClCompile Include="Flatten_Binary_Tree_To_Linked_List.cpp" />
     <ClCompile Include="Gas_Station.cpp" />
     <ClCompile Include="Generate_Parentheses.cpp" />
     <ClCompile Include="Gray_Code.cpp" />
     <ClCompile Include="Implement_Strstr.cpp" />
+    <ClCompile Include="Insertion_Sort_List.cpp" />
     <ClCompile Include="Insert_Interval.cpp" />
     <ClCompile Include="Integer_To_Roman.cpp" />
     <ClCompile Include="Interleaving_String.cpp" />
@@ -140,6 +142,7 @@
     <ClCompile Include="Maximal_Rectangle.cpp" />
     <ClCompile Include="Maximum_Depth_Of_Binary_Tree.cpp" />
     <ClCompile Include="Maximum_Subarray.cpp" />
+    <ClCompile Include="Max_Points_On_A_Line.cpp" />
     <ClCompile Include="Median_Of_Two_Sorted_Arrays.cpp" />
     <ClCompile Include="Merge_Intervals.cpp" />
     <ClCompile Include="Merge_K_Sorted_Lists.cpp" />
@@ -195,6 +198,7 @@
     <ClCompile Include="Single_Number.cpp" />
     <ClCompile Include="Single_Number_II.cpp" />
     <ClCompile Include="Sort_Colors.cpp" />
+    <ClCompile Include="Sort_List.cpp" />
     <ClCompile Include="Spiral_Matrix.cpp" />
     <ClCompile Include="Spiral_Matrix_II.cpp" />
     <ClCompile Include="Sqrt_x.cpp" />

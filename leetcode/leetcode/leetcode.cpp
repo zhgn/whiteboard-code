@@ -25,102 +25,104 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
+struct Point {
+    int x;
+    int y;
+    Point() : x(0), y(0) {}
+    Point(int a, int b) : x(a), y(b) {}
+};
+
 class Solution {
 private:
-    bool reverse_k_nodes(ListNode *&pre_head, int k) {
-        ListNode *tail = pre_head;
-        for (int i=0; i<k; i++) {
-            if (tail != NULL) {
-                tail = tail->next;
-            } else {
-                return false;
-            }            
+    int gcd(int x, int y) {
+        if (x > y) {
+            return gcd(y, x);
         }
-        if (tail == NULL) {
-            return false;
+        if (y % x == 0) {
+            return x;
         }
-        
-        ListNode *cur = pre_head->next;
-        ListNode *pre = tail->next;
-        ListNode *stop = tail->next;
-        while (cur != stop) {
-            ListNode *next = cur->next;
-            cur->next = pre;
-            pre = cur;
-            cur = next;
+        return gcd(y%x, x);
+    }    
+
+    struct Coefficients {
+        int A;
+        int B;
+        int C;
+        Coefficients(int _A, int _B, int _C) : A(_A), B(_B), C(_C) {}
+        bool operator == (const Coefficients &rhs) const {
+            return (A == rhs.A && B == rhs.B && C == rhs.C);
         }
-        ListNode *next_pre_head = pre_head->next;
-        pre_head->next = tail;
-        pre_head = next_pre_head;
-        return true;
-    }
+    };
+
+    class CoefficientsHasher {        
+    public:
+        size_t operator () (const Coefficients &c) const {
+            return (c.A << 24) ^ (c.B << 12) ^ c.C;
+        }
+    };
 
 public:
-    ListNode *reverseKGroup(ListNode *head, int k) {
-        ListNode *dummy_head = new ListNode(0);
-        dummy_head->next = head;        
-        ListNode *pre_head = dummy_head;        
-        while (reverse_k_nodes(pre_head, k)) {
-            ;
+    int maxPoints(vector<Point> &points) {
+        int num = points.size();
+        if (num == 1) {
+            return 1;
         }
-        return dummy_head->next;
+        unordered_map<Coefficients, int, CoefficientsHasher> lines;
+        for (int i=0; i<num; i++) {
+            for (int j=i+1; j<num; j++) {
+                int A = points[i].y - points[j].y;
+                int B = points[j].x - points[i].x;
+                
+                if (A == 0) {
+                    B = 1;
+                } else if (B == 0) {
+                    A = 1;
+                } else {
+                    if (A < 0) {
+                        A = -A;
+                        B = -B;
+                    }
+                    int gcd_of_a_and_b = gcd(abs(A), abs(B));
+                    A /= gcd_of_a_and_b;
+                    B /= gcd_of_a_and_b;
+                }
+                
+                int C = -(A * points[i].x + B * points[i].y);
+                Coefficients c(A, B, C);
+                auto it = lines.find(c);
+                if (it == lines.end()) {
+                    lines.insert(make_pair(c, 0));
+                }                 
+            }
+        }
+
+        int ret = 0;
+        for (int i=0; i<num; i++) {
+            for (auto line = lines.begin(); line != lines.end(); line++) {
+                auto c = line->first;
+                if (c.A * points[i].x + c.B * points[i].y + c.C == 0) {
+                    (line->second) ++;
+                    if (line->second > ret) {
+                        ret = line->second;
+                    }
+                }
+            }
+        }
+        return ret;
     }
 };
 
-class LRUCache{
-private:
-    int m_capacity;
-    list<int> data_list;
-    unordered_map<int, list<int>::iterator> data_hash;
-
-public:
-    LRUCache(int capacity) {
-        m_capacity = capacity;
-        data_list.clear();
-        data_hash.clear();
-    }
-    
-    int get(int key) {
-        auto it_member = data_hash.find(key);
-        if (it_member == data_hash.end()) {
-            return -1;
-        }
-        auto it_value = it_member->second;
-        int value = (*it_value);
-        
-        data_list.erase(it_value);
-        data_list.push_front(value);
-        it_member->second = data_list.begin();
-        return value;
-    }
-    
-    void set(int key, int value) {                
-        data_list.push_front(value);
-        auto it_member = data_hash.find(key);        
-        if (it_member == data_hash.end()) {
-            data_hash.insert(make_pair(key, data_list.begin()));
-        } else {
-            auto it_value = it_member->second;
-            data_list.erase(it_value);            
-            it_member->second = data_list.begin(); 
-        }                   
-
-        if (data_list.size() > m_capacity) {
-            int del_key = data_list.back();
-            data_hash.erase(del_key);
-            data_list.pop_back();
-        }
-    }
-};
-
+//[(84,250),(0,0),(0,0),]
 int _tmain(int argc, _TCHAR* argv[])
 {
-    LRUCache lru(1);
-    lru.set(2,1);
-    lru.get(2);
-    lru.set(3,2);
-    lru.get(2);
-    lru.get(3);
+    Solution s;
+    vector<Point> points;
+    points.push_back(Point(0,0));
+    points.push_back(Point(1,0));
+    points.push_back(Point(1,0));
+    points.push_back(Point(84,250));
+    
+    cout << s.maxPoints(points);
     return 0;
 }
 
